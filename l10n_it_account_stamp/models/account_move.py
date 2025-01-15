@@ -110,7 +110,7 @@ class AccountMove(models.Model):
     )
     def _compute_tax_stamp_line_present(self):
         for invoice in self:
-            invoice.tax_stamp_line_present = invoice.is_tax_stamp_line_present()
+            invoice.tax_stamp_line_present = invoice.is_tax_stamp_product_present()
 
     def is_tax_stamp_product_present(self):
         product_stamp = self.invoice_line_ids.filtered(
