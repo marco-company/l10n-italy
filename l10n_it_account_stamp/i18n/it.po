@@ -33,13 +33,11 @@ msgstr ""
 #. module: l10n_it_account_stamp
 #: model_terms:ir.ui.view,arch_db:l10n_it_account_stamp.account_move_form_stamp
 msgid ""
-"<span attrs=\"{'invisible': [('tax_stamp_line_present', '=', False)]}\">\n"
+"<span attrs=\"{'invisible': [('tax_stamp_invoice_line_present', '=', "
+"False)]}\">\n"
 "                        Stamp charged to customer\n"
 "                    </span>"
 msgstr ""
-"<span attrs=\"{'invisible': [('tax_stamp_line_present', '=', False)]}\">\n"
-"                        Bollo addebitato al cliente\n"
-"                    </span>"
 
 #. module: l10n_it_account_stamp
 #: model_terms:ir.ui.view,arch_db:l10n_it_account_stamp.view_account_config_settings_stamp
@@ -192,9 +190,9 @@ msgstr ""
 "        "
 
 #. module: l10n_it_account_stamp
-#: model:ir.model.fields,field_description:l10n_it_account_stamp.field_account_bank_statement_line__tax_stamp_line_present
-#: model:ir.model.fields,field_description:l10n_it_account_stamp.field_account_move__tax_stamp_line_present
-#: model:ir.model.fields,field_description:l10n_it_account_stamp.field_account_payment__tax_stamp_line_present
+#: model:ir.model.fields,field_description:l10n_it_account_stamp.field_account_bank_statement_line__tax_stamp_invoice_line_present
+#: model:ir.model.fields,field_description:l10n_it_account_stamp.field_account_move__tax_stamp_invoice_line_present
+#: model:ir.model.fields,field_description:l10n_it_account_stamp.field_account_payment__tax_stamp_invoice_line_present
 msgid "Stamp line is present in invoice"
 msgstr "La riga bollo è presente in fattura"
 
@@ -270,6 +268,15 @@ msgstr "Riga per l'imposta di bollo %s già presente, prima rimuoverla."
 #, python-format
 msgid "The product %s must be a stamp to apply set taxes!"
 msgstr "Il prodotto %s deve essere un bollo per applicare le imposte definite!"
+
+#~ msgid ""
+#~ "<span attrs=\"{'invisible': [('tax_stamp_line_present', '=', False)]}\">\n"
+#~ "                        Stamp charged to customer\n"
+#~ "                    </span>"
+#~ msgstr ""
+#~ "<span attrs=\"{'invisible': [('tax_stamp_line_present', '=', False)]}\">\n"
+#~ "                        Bollo addebitato al cliente\n"
+#~ "                    </span>"
 
 #~ msgid "Add tax stamp line"
 #~ msgstr "Aggiungi riga imposta di bollo"
