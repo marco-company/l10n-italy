@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo-addon-currency_rate_update_boi>=16.0dev,<16.1dev',
         'odoo-addon-fiscal_epos_print>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_abicab>=16.0dev,<16.1dev',
+        'odoo-addon-l10n_it_accompanying_invoice>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_account>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_account_stamp>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_account_tax_kind>=16.0dev,<16.1dev',
