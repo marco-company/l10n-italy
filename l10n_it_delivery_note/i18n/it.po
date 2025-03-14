@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-08 14:45+0000\n"
-"PO-Revision-Date: 2024-08-22 11:07+0000\n"
+"PO-Revision-Date: 2025-01-20 17:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -226,7 +226,7 @@ msgstr "Aspetto dei beni"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_goods_appearance_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_goods_appearance_id
 msgid "Appearance of goods of Delivery"
-msgstr ""
+msgstr "Aspetto dei beni della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.actions.act_window,name:l10n_it_delivery_note.stock_picking_goods_appearance_action
@@ -321,7 +321,7 @@ msgstr "Vettore"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_carrier_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_carrier_id
 msgid "Carrier of Delivery"
-msgstr ""
+msgstr "Vettore della consegna"
 
 #. module: l10n_it_delivery_note
 #: model_terms:ir.ui.view,arch_db:l10n_it_delivery_note.parcels_data
@@ -336,7 +336,7 @@ msgstr "Vettori"
 #. module: l10n_it_delivery_note
 #: model:ir.model,name:l10n_it_delivery_note.model_l10n_it_delivery_note_delivery_mixin
 msgid "Common data for records to be delivered"
-msgstr ""
+msgstr "Dati comuni per i record da consegnare"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model,name:l10n_it_delivery_note.model_res_company
@@ -362,7 +362,7 @@ msgstr "Condizione di trasporto"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_transport_condition_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_transport_condition_id
 msgid "Condition of transport of Delivery"
-msgstr ""
+msgstr "Condizione di trasporto della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.actions.act_window,name:l10n_it_delivery_note.stock_picking_transport_condition_action
@@ -787,13 +787,13 @@ msgstr "Peso lordo"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_gross_weight
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_gross_weight
 msgid "Gross Weight of Delivery"
-msgstr ""
+msgstr "Peso lordo della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_gross_weight_uom_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_gross_weight_uom_id
 msgid "Gross Weight of Delivery UoM"
-msgstr ""
+msgstr "UdM del peso lordo della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__gross_weight
@@ -850,7 +850,8 @@ msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 #. module: l10n_it_delivery_note
 #: model_terms:ir.ui.view,arch_db:l10n_it_delivery_note.stock_delivery_note_wizard_error_message_template
 msgid "If these problems persist, don't hesitate to contact the helpdesk."
-msgstr "Se questi problemi persistono, non esitate a contattare l'helpdesk."
+msgstr ""
+"Se questi problemi persistono, non esitate a contattare l'assistenza clienti."
 
 #. module: l10n_it_delivery_note
 #. odoo-python
@@ -893,7 +894,7 @@ msgstr "Nota interna"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_note
 msgid "Internal note of delivery"
-msgstr ""
+msgstr "Note interne della consegna"
 
 #. module: l10n_it_delivery_note
 #: model_terms:ir.ui.view,arch_db:l10n_it_delivery_note.stock_delivery_note_form_view
@@ -1072,7 +1073,7 @@ msgstr "Metodo di trasporto"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_transport_method_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_transport_method_id
 msgid "Method of transport of Delivery"
-msgstr ""
+msgstr "Metodo di trasporto della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.actions.act_window,name:l10n_it_delivery_note.stock_picking_transport_method_action
@@ -1100,13 +1101,13 @@ msgstr "Peso netto"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_net_weight
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_net_weight
 msgid "Net Weight of Delivery"
-msgstr ""
+msgstr "Peso netto della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_net_weight_uom_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_net_weight_uom_id
 msgid "Net Weight of Delivery UoM"
-msgstr ""
+msgstr "UdM del peso netto della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__net_weight
@@ -1221,7 +1222,7 @@ msgstr "Colli"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_packages
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_packages
 msgid "Packages of Delivery"
-msgstr ""
+msgstr "Colli della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__partner_ref
@@ -1325,7 +1326,7 @@ msgstr "Causale di trasporto"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_transport_reason_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_transport_reason_id
 msgid "Reason of transport of Delivery"
-msgstr ""
+msgstr "Causale di trasporto della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.actions.act_window,name:l10n_it_delivery_note.stock_picking_transport_reason_action
@@ -1576,6 +1577,16 @@ msgid "Summary"
 msgstr "Riepilogo"
 
 #. module: l10n_it_delivery_note
+#: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_picking__dn_supplier_date
+msgid "Supplier DN Date"
+msgstr "Data DDT fornitore"
+
+#. module: l10n_it_delivery_note
+#: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_picking__dn_supplier_number
+msgid "Supplier DN Number"
+msgstr "Numero DDT fornitore"
+
+#. module: l10n_it_delivery_note
 #: model_terms:ir.ui.view,arch_db:l10n_it_delivery_note.stock_delivery_note_form_view
 msgid "Tax"
 msgstr "Imposta"
@@ -1769,7 +1780,7 @@ msgstr "Trasferimento"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_transport_datetime
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_transport_datetime
 msgid "Transport Date of Delivery"
-msgstr ""
+msgstr "Data di trasporto della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__transport_datetime
@@ -1896,13 +1907,13 @@ msgstr "UdM del volume"
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_volume
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_volume
 msgid "Volume of Delivery"
-msgstr ""
+msgstr "Volume della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_l10n_it_delivery_note_delivery_mixin__delivery_volume_uom_id
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note__delivery_volume_uom_id
 msgid "Volume of Delivery UoM"
-msgstr ""
+msgstr "UdM del volume della consegna"
 
 #. module: l10n_it_delivery_note
 #: model:ir.model.fields,field_description:l10n_it_delivery_note.field_stock_delivery_note_line__move_id

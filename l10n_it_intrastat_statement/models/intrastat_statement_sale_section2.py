@@ -29,6 +29,14 @@ class IntrastatStatementSaleSection2(models.Model):
     def get_section_number(self):
         return 2
 
+    def _get_section_period_ref(self, statement_id, inv_intra_line):
+        ref_period = statement_id._get_period_ref()
+        # if reversed entry, updates the date
+        if inv_intra_line.invoice_id.reversed_entry_id and statement_id.period_type == "M":
+            reversed_invoice_date = inv_intra_line.invoice_id.reversed_entry_id.date
+            ref_period["month"] = reversed_invoice_date.month
+        return ref_period
+
     @api.model
     def _prepare_statement_line(self, inv_intra_line, statement_id=None):
         res = super()._prepare_statement_line(inv_intra_line, statement_id)
@@ -50,8 +58,7 @@ class IntrastatStatementSaleSection2(models.Model):
         )
 
         # Period Ref
-        ref_period = statement_id._get_period_ref()
-
+        ref_period = self._get_section_period_ref(statement_id, inv_intra_line)
         # Sign variation
         sign_variation = False
         if inv_intra_line.invoice_id.move_type == "out_refund":

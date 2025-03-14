@@ -44,6 +44,7 @@ class AccountIntrastatStatement(models.Model):
     _name = "account.intrastat.statement"
     _description = "Intrastat Statement"
     _rec_name = "number"
+    _order = "date desc"
 
     def round_min_amount(self, amount, company=None, prec_digits=None, truncate=False):
         """
@@ -820,6 +821,7 @@ class AccountIntrastatStatement(models.Model):
                     )
                     to_refund_model = self.env[refund_section_model]
                     self.refund_line(line, to_refund_model)
+        self.recompute_sequence_lines()
         return True
 
     @staticmethod
