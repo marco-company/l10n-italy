@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-04-02 16:47+0000\n"
+"Last-Translator: Matteo <matteomircoli@openforce.it>\n"
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.2\n"
 
 #. module: l10n_it_withholding_tax
 #. odoo-python
@@ -24,12 +26,12 @@ msgstr ""
 #. module: l10n_it_withholding_tax
 #: model_terms:ir.ui.view,arch_db:l10n_it_withholding_tax.document_tax_totals_wt
 msgid "<span>Withholding Tax</span>"
-msgstr ""
+msgstr "<span>Steuerrückbehalt</span>"
 
 #. module: l10n_it_withholding_tax
 #: model_terms:ir.ui.view,arch_db:l10n_it_withholding_tax.document_tax_totals_wt
 msgid "<strong>Net To Pay</strong>"
-msgstr ""
+msgstr "<strong>Zahlungsbetrag</strong>"
 
 #. module: l10n_it_withholding_tax
 #: model_terms:ir.ui.view,arch_db:l10n_it_withholding_tax.print_withholding_tax
