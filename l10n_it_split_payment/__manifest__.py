@@ -19,6 +19,7 @@
         "data/account_tax_group_data.xml",
         "views/account_view.xml",
         "views/config_view.xml",
+        "views/report_invoice.xml",
     ],
     "images": [
         "static/fiscal_position.png",
