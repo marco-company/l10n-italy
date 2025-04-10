@@ -54,6 +54,7 @@ setuptools.setup(
         'odoo-addon-l10n_it_intrastat>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_intrastat_statement>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_ipa>=16.0dev,<16.1dev',
+        'odoo-addon-l10n_it_location_nuts>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_payment_reason>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_pec>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_pos_fiscalcode>=16.0dev,<16.1dev',
