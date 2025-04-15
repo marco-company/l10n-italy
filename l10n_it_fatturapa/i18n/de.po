@@ -10,14 +10,16 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-08 03:45+0000\n"
-"PO-Revision-Date: 2017-12-08 03:45+0000\n"
-"Last-Translator: Niki Waibel <niki.waibel@gmail.com>, 2017\n"
+"PO-Revision-Date: 2025-04-15 12:24+0000\n"
+"Last-Translator: BitStab <bitstab@users.noreply.translation.odoo-"
+"community.org>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: l10n_it_fatturapa
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa.view_account_config_settings
@@ -26,6 +28,10 @@ msgid ""
 "specific.\" aria-label=\"Values set here are company-specific.\" "
 "groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title="
+"\"Die hier eingestellten Werte sind unternehmensspezifisch.\" aria-label="
+"\"Die hier eingestellten Werte sind unternehmensspezifisch.\" groups="
+"\"base.group_multi_company\" role=\"img\"/>"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_payment_detail__payment_bank_abi
@@ -36,7 +42,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_attachment__access_token
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_attachments__access_token
 msgid "Access Token"
-msgstr ""
+msgstr "Zugriffstoken"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,help:l10n_it_fatturapa.field_account_bank_statement_line__efatt_stabile_organizzazione_provincia
@@ -47,58 +53,63 @@ msgid ""
 "information element 1.2.3.4 <Comune> belongs. Must be filled if the "
 "information element 1.2.3.6 <Nazione> is equal to IT"
 msgstr ""
+"Abkürzung der Provinz, zu der die im Informationselement 1.2.3.4 <Gemeinde> "
+"angegebene Gemeinde gehört. Auszufüllen, wenn das Informationselement "
+"1.2.3.6 <Nation> gleich IT ist"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_attachment__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Aktion erforderlich"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_activity_progress__fatturapa_activity_progress
 msgid "Activity Progress"
-msgstr ""
+msgstr "Arbeitsfortschritt"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_res_partner__codice_destinatario
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_res_users__codice_destinatario
 msgid "Addressee Code"
-msgstr ""
+msgstr "Empfängerkodex"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_res_partner__pec_destinatario
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_res_users__pec_destinatario
 msgid "Addressee PEC"
-msgstr ""
+msgstr "Empfänger PEC"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_account_move_line__admin_ref
 msgid "Admin. ref."
-msgstr ""
+msgstr "Verw. Ref."
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields.selection,name:l10n_it_fatturapa.selection__fatturapa_related_document_type__type__agreement
+#, fuzzy
 msgid "Agreement"
-msgstr ""
+msgstr "Vereinbarung"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_discount_rise_price__amount
+#, fuzzy
 msgid "Amount"
-msgstr ""
+msgstr "Betrag"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_summary_data__amount_tax
 msgid "Amount Tax"
-msgstr ""
+msgstr "Steuerbetrag"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_summary_data__amount_untaxed
 msgid "Amount Untaxed"
-msgstr ""
+msgstr "Steuergrundlage"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_fatturapa_payment_detail__penalty_amount
 msgid "Amount of Penalty"
-msgstr ""
+msgstr "Höhe der Geldbuße"
 
 #. module: l10n_it_fatturapa
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_account_bank_statement_line__art73
@@ -107,7 +118,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_res_company__fatturapa_art73
 #: model:ir.model.fields,field_description:l10n_it_fatturapa.field_res_config_settings__fatturapa_art73
 msgid "Art. 73"
-msgstr ""
+msgstr "Art. 73"
 
 #. module: l10n_it_fatturapa
 #. odoo-python
