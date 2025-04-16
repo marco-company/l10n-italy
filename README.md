@@ -21,14 +21,15 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[account_vat_period_end_statement](account_vat_period_end_statement/) | 16.0.1.3.0 |  | Allow to create the 'VAT Statement'.
+[account_vat_period_end_statement](account_vat_period_end_statement/) | 16.0.1.3.1 |  | Allow to create the 'VAT Statement'.
 [currency_rate_update_boi](currency_rate_update_boi/) | 16.0.1.0.1 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Update exchange rates using www.bancaditalia.it
 [fiscal_epos_print](fiscal_epos_print/) | 16.0.1.0.1 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | ePOS-Print XML Fiscal Printer Driver - Stampanti Epson compatibili: FP81II, FP90III
 [l10n_it_abicab](l10n_it_abicab/) | 16.0.1.0.1 | [![Borruso](https://github.com/Borruso.png?size=30px)](https://github.com/Borruso) | Base Bank ABI/CAB codes
 [l10n_it_accompanying_invoice](l10n_it_accompanying_invoice/) | 16.0.1.0.1 |  | Stampa della fattura accompagnatoria
-[l10n_it_account](l10n_it_account/) | 16.0.1.2.0 |  | Modulo base usato come dipendenza di altri moduli contabili
+[l10n_it_account](l10n_it_account/) | 16.0.1.3.0 |  | Modulo base usato come dipendenza di altri moduli contabili
 [l10n_it_account_stamp](l10n_it_account_stamp/) | 16.0.1.3.1 |  | Gestione automatica dell'imposta di bollo
 [l10n_it_account_tax_kind](l10n_it_account_tax_kind/) | 16.0.1.0.1 |  | Gestione natura delle aliquote IVA
+[l10n_it_amount_to_text](l10n_it_amount_to_text/) | 16.0.1.0.0 |  | Localizza le valute in italiano per amount_to_text
 [l10n_it_appointment_code](l10n_it_appointment_code/) | 16.0.1.0.0 |  | Aggiunge la tabella dei codici carica da usare nelle dichiarazioni fiscali italiane
 [l10n_it_asset_management](l10n_it_asset_management/) | 16.0.1.4.1 |  | Gestione Cespiti
 [l10n_it_ateco](l10n_it_ateco/) | 16.0.1.1.1 |  | ITA - Codici Ateco
@@ -66,15 +67,16 @@ addon | version | maintainers | summary
 [l10n_it_intrastat](l10n_it_intrastat/) | 16.0.1.2.1 |  | Riclassificazione merci e servizi per dichiarazioni Intrastat
 [l10n_it_intrastat_statement](l10n_it_intrastat_statement/) | 16.0.1.3.3 |  | Dichiarazione Intrastat per l'Agenzia delle Dogane
 [l10n_it_ipa](l10n_it_ipa/) | 16.0.1.0.1 |  | ITA - Codice IPA
+[l10n_it_location_nuts](l10n_it_location_nuts/) | 16.0.1.0.0 |  | Opzioni NUTS specifiche per l'Italia
 [l10n_it_payment_reason](l10n_it_payment_reason/) | 16.0.1.0.0 |  | Aggiunge la tabella delle causali di pagamento da usare ad esempio nelle ritenute d'acconto
 [l10n_it_pec](l10n_it_pec/) | 16.0.1.0.0 |  | Aggiunge il campo email PEC al partner
 [l10n_it_pos_fiscalcode](l10n_it_pos_fiscalcode/) | 16.0.1.0.0 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Gestione codice fiscale del cliente all'interno dell'interfaccia del POS
 [l10n_it_rea](l10n_it_rea/) | 16.0.1.0.0 |  | Gestisce i campi del Repertorio Economico Amministrativo
-[l10n_it_reverse_charge](l10n_it_reverse_charge/) | 16.0.1.0.8 |  | Inversione contabile
-[l10n_it_riba](l10n_it_riba/) | 16.0.1.9.1 |  | Ricevute bancarie
+[l10n_it_reverse_charge](l10n_it_reverse_charge/) | 16.0.1.0.9 |  | Inversione contabile
+[l10n_it_riba](l10n_it_riba/) | 16.0.1.10.0 |  | Ricevute bancarie
 [l10n_it_sct_cbi](l10n_it_sct_cbi/) | 16.0.1.0.1 | [![SirAionTech](https://github.com/SirAionTech.png?size=30px)](https://github.com/SirAionTech) | Usare gli standard CBI per SEPA Credit Transfer
 [l10n_it_sdi_channel](l10n_it_sdi_channel/) | 16.0.1.1.1 | [![sergiocorato](https://github.com/sergiocorato.png?size=30px)](https://github.com/sergiocorato) | Aggiunge il canale di invio/ricezione dei file XML attraverso lo SdI
-[l10n_it_split_payment](l10n_it_split_payment/) | 16.0.1.0.1 |  | Scissione pagamenti
+[l10n_it_split_payment](l10n_it_split_payment/) | 16.0.1.1.0 |  | Scissione pagamenti
 [l10n_it_vat_payability](l10n_it_vat_payability/) | 16.0.1.0.0 |  | ITA - Esigibilità IVA
 [l10n_it_vat_registries](l10n_it_vat_registries/) | 16.0.1.3.0 |  | ITA - Registri IVA
 [l10n_it_vat_registries_rc](l10n_it_vat_registries_rc/) | 16.0.1.0.0 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Integrazione l10n_it_vat_registries e l10n_it_reverse_charge
@@ -87,7 +89,7 @@ addon | version | maintainers | summary
 [l10n_it_website_portal_fiscalcode](l10n_it_website_portal_fiscalcode/) | 16.0.1.0.0 |  | Add fiscal code to details of frontend user
 [l10n_it_website_portal_ipa](l10n_it_website_portal_ipa/) | 16.0.1.0.1 |  | Aggiunge l'indice PA (IPA) tra i dettagli dell'utente nel portale.
 [l10n_it_website_sale_fiscalcode](l10n_it_website_sale_fiscalcode/) | 16.0.1.0.0 |  | Website Sale FiscalCode
-[l10n_it_withholding_tax](l10n_it_withholding_tax/) | 16.0.1.1.8 |  | ITA - Ritenute d'acconto
+[l10n_it_withholding_tax](l10n_it_withholding_tax/) | 16.0.1.2.1 |  | ITA - Ritenute d'acconto
 [l10n_it_withholding_tax_financial_report](l10n_it_withholding_tax_financial_report/) | 16.0.1.0.1 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Integrazione Ritenute d'acconto e Rendiconti contabili
 [l10n_it_withholding_tax_payment](l10n_it_withholding_tax_payment/) | 16.0.1.1.0 |  | Gestisce le ritenute sulle fatture e sui pagamenti
 [l10n_it_withholding_tax_payment_order](l10n_it_withholding_tax_payment_order/) | 16.0.1.0.0 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Integrazione Ritenute d'acconto e Ordini di pagamento
