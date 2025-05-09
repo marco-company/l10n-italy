@@ -1,5 +1,6 @@
 # Copyright 2016 Alessandro Camilli <alessandro.camilli@openforce.it>
 # Copyright 2024 Simone Rubino - Aion Tech
+# Copyright 2025 Simone Rubino
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "ITA - Banking SEPA Credit Transfer CBI",
@@ -10,7 +11,7 @@
     "website": "https://github.com/OCA/l10n-italy" "/tree/16.0/l10n_it_sct_cbi",
     "license": "AGPL-3",
     "maintainers": [
-        "SirAionTech",
+        "monen17",
     ],
     "depends": [
         "account_banking_pain_base",
