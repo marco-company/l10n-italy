@@ -72,7 +72,7 @@ addon | version | maintainers | summary
 [l10n_it_pec](l10n_it_pec/) | 16.0.1.0.0 |  | Aggiunge il campo email PEC al partner
 [l10n_it_pos_fiscalcode](l10n_it_pos_fiscalcode/) | 16.0.1.0.0 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Gestione codice fiscale del cliente all'interno dell'interfaccia del POS
 [l10n_it_rea](l10n_it_rea/) | 16.0.1.0.0 |  | Gestisce i campi del Repertorio Economico Amministrativo
-[l10n_it_reverse_charge](l10n_it_reverse_charge/) | 16.0.1.0.10 |  | Inversione contabile
+[l10n_it_reverse_charge](l10n_it_reverse_charge/) | 16.0.1.0.11 |  | Inversione contabile
 [l10n_it_reverse_charge_start_end_dates](l10n_it_reverse_charge_start_end_dates/) | 16.0.1.0.0 |  | Gestione delle date di competenza per le autofatture in reverse charge
 [l10n_it_riba](l10n_it_riba/) | 16.0.1.10.0 |  | Ricevute bancarie
 [l10n_it_sct_cbi](l10n_it_sct_cbi/) | 16.0.1.0.2 | [![monen17](https://github.com/monen17.png?size=30px)](https://github.com/monen17) | Usare gli standard CBI per SEPA Credit Transfer
