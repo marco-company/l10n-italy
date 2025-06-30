@@ -79,7 +79,7 @@ addon | version | maintainers | summary
 [l10n_it_sdi_channel](l10n_it_sdi_channel/) | 16.0.1.1.1 | <a href='https://github.com/sergiocorato'><img src='https://github.com/sergiocorato.png' width='32' height='32' style='border-radius:50%;' alt='sergiocorato'/></a> | Aggiunge il canale di invio/ricezione dei file XML attraverso lo SdI
 [l10n_it_split_payment](l10n_it_split_payment/) | 16.0.1.1.1 |  | Scissione pagamenti
 [l10n_it_vat_payability](l10n_it_vat_payability/) | 16.0.1.0.0 |  | ITA - Esigibilità IVA
-[l10n_it_vat_registries](l10n_it_vat_registries/) | 16.0.1.4.1 |  | ITA - Registri IVA
+[l10n_it_vat_registries](l10n_it_vat_registries/) | 16.0.1.5.0 |  | ITA - Registri IVA
 [l10n_it_vat_registries_rc](l10n_it_vat_registries_rc/) | 16.0.1.0.1 | <a href='https://github.com/eLBati'><img src='https://github.com/eLBati.png' width='32' height='32' style='border-radius:50%;' alt='eLBati'/></a> | Integrazione l10n_it_vat_registries e l10n_it_reverse_charge
 [l10n_it_vat_registries_split_payment](l10n_it_vat_registries_split_payment/) | 16.0.1.0.0 |  | Modulo di congiunzione tra registri IVA e scissione dei pagamenti
 [l10n_it_vat_settlement_date](l10n_it_vat_settlement_date/) | 16.0.1.1.0 |  | Settlement date for VAT Statement
