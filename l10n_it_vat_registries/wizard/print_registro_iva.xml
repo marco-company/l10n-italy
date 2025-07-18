@@ -20,6 +20,9 @@
                     <group>
                         <field name="year_footer" />
                     </group>
+                    <group>
+                        <field name="enable_currency" />
+                    </group>
                     <separator string="Journals" colspan="2" />
                     <group>
                         <field name="tax_registry_id" />
@@ -44,6 +47,13 @@
                     <button
                         string="Print"
                         name="print_registro"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    or
+                    <button
+                        string="Print XLSX"
+                        name="print_registro_xlsx"
                         type="object"
                         class="oe_highlight"
                     />
