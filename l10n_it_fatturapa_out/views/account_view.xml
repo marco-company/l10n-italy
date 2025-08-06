@@ -89,6 +89,22 @@
                             string="Configuration"
                             colspan="2"
                         >
+                            <field
+                                name="fatturapa_payment_method_id"
+                                attrs="{
+                                    'readonly': [
+                                        ('fatturapa_attachment_out_id' ,'!=', False),
+                                    ],
+                                }"
+                            />
+                            <field
+                                name="fatturapa_payment_term_id"
+                                attrs="{
+                                    'readonly': [
+                                        ('fatturapa_attachment_out_id' ,'!=', False),
+                                    ],
+                                }"
+                            />
                             <field name="related_documents">
                                 <tree editable="bottom">
                                     <field name="type" />
