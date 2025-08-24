@@ -90,6 +90,17 @@ class StockPicking(models.Model):
         string="DN Operation Type", related="picking_type_id.code"
     )
 
+    default_transport_condition_id = fields.Many2one(
+        "stock.picking.transport.condition",
+    )
+
+    default_transport_reason_id = fields.Many2one(
+        "stock.picking.transport.reason",
+    )
+    default_transport_method_id = fields.Many2one(
+        "stock.picking.transport.method",
+    )
+
     carrier_partner_id = fields.Many2one("res.partner", related="carrier_id.partner_id")
 
     use_delivery_note = fields.Boolean(compute="_compute_boolean_flags")
