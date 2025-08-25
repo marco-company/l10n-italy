@@ -166,8 +166,18 @@ class StockDeliveryNote(models.Model):
     type_code = fields.Selection(
         string="Type of Operation", related="type_id.code", store=True
     )
-    packages = fields.Integer(states=DONE_READONLY_STATE)
-    volume = fields.Float(states=DONE_READONLY_STATE)
+    packages = fields.Integer(
+        states=DONE_READONLY_STATE,
+        compute="_compute_numeric_fields",
+        store=True,
+        readonly=False,
+    )
+    volume = fields.Float(
+        states=DONE_READONLY_STATE,
+        compute="_compute_numeric_fields",
+        store=True,
+        readonly=False,
+    )
 
     volume_uom_id = fields.Many2one(
         "uom.uom",
@@ -178,10 +188,10 @@ class StockDeliveryNote(models.Model):
     )
     gross_weight = fields.Float(
         string="Gross weight",
+        states=DONE_READONLY_STATE,
+        compute="_compute_numeric_fields",
         store=True,
         readonly=False,
-        compute="_compute_weights",
-        states=DONE_READONLY_STATE,
     )
     gross_weight_uom_id = fields.Many2one(
         "uom.uom",
@@ -192,10 +202,10 @@ class StockDeliveryNote(models.Model):
     )
     net_weight = fields.Float(
         string="Net weight",
+        states=DONE_READONLY_STATE,
+        compute="_compute_numeric_fields",
         store=True,
         readonly=False,
-        compute="_compute_weights",
-        states=DONE_READONLY_STATE,
     )
     net_weight_uom_id = fields.Many2one(
         "uom.uom",
@@ -402,29 +412,62 @@ class StockDeliveryNote(models.Model):
         for note in self:
             note.pickings_picker = note.picking_ids
 
-    @api.depends("picking_ids")
-    def _compute_weights(self):
-        for note in self:
-            # fill gross & net weight from pickings
-            gross_weight = net_weight = 0.0
-            if note.picking_ids:
-                # this is the unit used for shipping_weight
-                weight_uom = self.env[
-                    "product.template"
-                ]._get_weight_uom_id_from_ir_config_parameter()
-                for pick in note.picking_ids:
-                    gross_weight += weight_uom._compute_quantity(
-                        pick.shipping_weight, note.gross_weight_uom_id
-                    )
-                    net_weight += weight_uom._compute_quantity(
-                        pick.shipping_weight, note.net_weight_uom_id
-                    )
-            note.gross_weight = gross_weight
-            note.net_weight = net_weight
+    def _aggregate_field_with_uom_from_pickings(
+        self, field_name, uom_field_name, target_uom
+    ):
+        """Helper method to aggregate a field with UoM conversion from pickings"""
+        total = 0
+        for picking in self.picking_ids:
+            value = getattr(picking, field_name, 0) or 0
+            if value:
+                picking_uom = getattr(picking, uom_field_name, False)
+                if target_uom and picking_uom:
+                    # Always use _compute_quantity (handles same UoM efficiently)
+                    converted_value = picking_uom._compute_quantity(value, target_uom)
+                    total += converted_value
+                else:
+                    # Fallback if no UoM available
+                    total += value
+        return total
 
-    @api.onchange("picking_ids")
-    def _onchange_picking_ids(self):
-        self._compute_weights()
+    @api.depends(
+        "picking_ids",
+        "picking_ids.delivery_packages",
+        "picking_ids.delivery_volume",
+        "picking_ids.shipping_weight",
+        "picking_ids.delivery_net_weight",
+    )
+    def _compute_numeric_fields(self):
+        """Auto-compute numeric fields from associated pickings with UoM conversion"""
+        for delivery_note in self:
+            if not delivery_note.picking_ids:
+                continue
+
+            # Aggregate numeric fields using helper method with UoM conversion
+            delivery_note.packages = sum(
+                p.delivery_packages or 0 for p in delivery_note.picking_ids
+            )
+            delivery_note.volume = (
+                delivery_note._aggregate_field_with_uom_from_pickings(
+                    "delivery_volume",
+                    "delivery_volume_uom_id",
+                    delivery_note.volume_uom_id,
+                )
+            )
+            delivery_note.gross_weight = (
+                delivery_note._aggregate_field_with_uom_from_pickings(
+                    "shipping_weight",
+                    "delivery_gross_weight_uom_id",
+                    delivery_note.gross_weight_uom_id,
+                )
+            )
+            delivery_note.net_weight = (
+                delivery_note._aggregate_field_with_uom_from_pickings(
+                    "delivery_net_weight",
+                    "delivery_net_weight_uom_id",
+                    delivery_note.net_weight_uom_id,
+                )
+            )
 
     @api.onchange("delivery_method_id")
     def _onchange_delivery_method_id(self):

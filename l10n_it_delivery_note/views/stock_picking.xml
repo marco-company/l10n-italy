@@ -344,6 +344,71 @@
                             </div>
                         </div>
                     </page>
+
+                    <!-- DDT Pre-fill Data Page -->
+                    <page
+                        name="ddt_prefill"
+                        string="DDT Pre-fill Data"
+                        attrs="{'invisible': [('use_advanced_behaviour', '=', False)]}"
+                    >
+                        <div class="alert alert-info" role="alert">
+                            <strong>Pre-fill DDT header fields</strong><br />
+                            These fields will be used to pre-populate the DDT when created.
+                            Transport information is hidden once DDT exists, physical information remains editable.
+                        </div>
+
+                        <!-- Hidden computed fields -->
+                        <field name="delivery_note_exists" invisible="1" />
+
+                        <group
+                            string="Transport Information"
+                            attrs="{'invisible': [('delivery_note_exists', '=', True)]}"
+                        >
+                            <group>
+                                <field name="delivery_transport_condition_id" />
+                                <field name="delivery_goods_appearance_id" />
+                                <field name="delivery_transport_reason_id" />
+                                <field name="delivery_transport_method_id" />
+                            </group>
+                            <group>
+                                <field name="delivery_carrier_id" />
+                                <field name="delivery_method_id" />
+                                <field name="delivery_transport_datetime" />
+                            </group>
+                        </group>
+
+                        <group string="Numeric Information">
+                            <group>
+                                <field name="delivery_packages" />
+                                <label for="delivery_volume" />
+                                <div class="o_row">
+                                    <field name="delivery_volume" />
+                                    <field
+                                        name="delivery_volume_uom_id"
+                                        groups="uom.group_uom"
+                                    />
+                                </div>
+                            </group>
+                            <group>
+                                <label for="delivery_gross_weight" />
+                                <div class="o_row">
+                                    <field name="delivery_gross_weight" />
+                                    <field
+                                        name="delivery_gross_weight_uom_id"
+                                        groups="uom.group_uom"
+                                    />
+                                </div>
+                                <label for="delivery_net_weight" />
+                                <div class="o_row">
+                                    <field name="delivery_net_weight" />
+                                    <field
+                                        name="delivery_net_weight_uom_id"
+                                        groups="uom.group_uom"
+                                    />
+                                </div>
+                            </group>
+                        </group>
+                    </page>
                 </xpath>
             </data>
         </field>

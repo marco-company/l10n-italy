@@ -31,6 +31,9 @@
                         <field name="date" />
                     </group>
                 </group>
+                <!-- Conflicts Warning -->
+
+
                 <notebook attrs="{'invisible': [('error_message', '!=', False)]}">
                     <page name="pickings" string="Pickings">
                         <field name="selected_picking_ids">
@@ -46,6 +49,69 @@
                                 <field name="state" />
                             </tree>
                         </field>
+                        <group string="Master Data Selection">
+                            <field
+                                name="master_picking_id"
+                                attrs="{'invisible': [('selected_picking_ids', '=', [])]}"
+                                options="{'no_create': True, 'no_open': True}"
+                            />
+                            <p
+                                class="text-muted"
+                                attrs="{'invisible': [('selected_picking_ids', '=', [])]}"
+                            >
+                                Select which picking to use as master data for transport information and UoM fields.
+                                Numeric fields (packages, volume, weights) will be summed from all pickings.
+                            </p>
+                        </group>
+                    </page>
+
+                    <page name="transport_data" string="Transport Data">
+                        <group string="Transport Information">
+                            <group>
+                                <field name="transport_condition_id" />
+                                <field name="goods_appearance_id" />
+                                <field name="transport_reason_id" />
+                                <field name="transport_method_id" />
+                            </group>
+                            <group>
+                                <field name="carrier_id" />
+                                <field name="transport_datetime" />
+                            </group>
+                        </group>
+                    </page>
+
+                    <page name="physical_data" string="Physical Data">
+                        <group string="Physical Information">
+                            <group>
+                                <field name="packages" />
+                                <label for="volume" />
+                                <div class="o_row">
+                                    <field name="volume" />
+                                    <field
+                                        name="volume_uom_id"
+                                        groups="uom.group_uom"
+                                    />
+                                </div>
+                            </group>
+                            <group>
+                                <label for="gross_weight" />
+                                <div class="o_row">
+                                    <field name="gross_weight" />
+                                    <field
+                                        name="gross_weight_uom_id"
+                                        groups="uom.group_uom"
+                                    />
+                                </div>
+                                <label for="net_weight" />
+                                <div class="o_row">
+                                    <field name="net_weight" />
+                                    <field
+                                        name="net_weight_uom_id"
+                                        groups="uom.group_uom"
+                                    />
+                                </div>
+                            </group>
+                        </group>
                     </page>
                 </notebook>
                 <footer>

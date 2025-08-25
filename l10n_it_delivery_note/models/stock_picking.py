@@ -17,7 +17,11 @@ CANCEL_MOVE_STATE = "cancel"
 
 class StockPicking(models.Model):
     _name = "stock.picking"
-    _inherit = ["stock.picking", "shipping.information.updater.mixin"]
+    _inherit = [
+        "stock.picking",
+        "shipping.information.updater.mixin",
+        "l10n_it_delivery_note.delivery_mixin",
+    ]
 
     delivery_note_id = fields.Many2one(
         "stock.delivery.note", string="Delivery Note", copy=False
@@ -374,6 +378,53 @@ class StockPicking(models.Model):
             limit=1,
         )
         delivery_method_id = self.mapped("carrier_id")[:1]
+
+        # Pre-calculate pre-fill values (higher priority)
+        prefill_transport_condition = (
+            self.delivery_transport_condition_id.id
+            if self.delivery_transport_condition_id
+            else False
+        )
+        prefill_goods_appearance = (
+            self.delivery_goods_appearance_id.id
+            if self.delivery_goods_appearance_id
+            else False
+        )
+        prefill_transport_reason = (
+            self.delivery_transport_reason_id.id
+            if self.delivery_transport_reason_id
+            else False
+        )
+        prefill_transport_method = (
+            self.delivery_transport_method_id.id
+            if self.delivery_transport_method_id
+            else False
+        )
+        prefill_carrier = (
+            self.delivery_carrier_id.id if self.delivery_carrier_id else False
+        )
+        prefill_packages = self.delivery_packages if self.delivery_packages else False
+        prefill_volume = self.delivery_volume if self.delivery_volume else False
+        prefill_volume_uom = (
+            self.delivery_volume_uom_id.id if self.delivery_volume_uom_id else False
+        )
+        prefill_gross_weight = (
+            self.delivery_gross_weight if self.delivery_gross_weight else False
+        )
+        prefill_net_weight = (
+            self.delivery_net_weight if self.delivery_net_weight else False
+        )
+        prefill_net_weight_uom = (
+            self.delivery_net_weight_uom_id.id
+            if self.delivery_net_weight_uom_id
+            else False
+        )
+        prefill_transport_datetime = (
+            self.delivery_transport_datetime
+            if self.delivery_transport_datetime
+            else False
+        )
+
         return self.env["stock.delivery.note"].create(
             {
                 "company_id": self.company_id.id,
@@ -384,28 +435,39 @@ class StockPicking(models.Model):
                 "partner_shipping_id": partners[1].id,
                 "type_id": type_id.id,
                 "date": self.date_done,
-                "carrier_id": delivery_method_id.partner_id.id,
+                "carrier_id": prefill_carrier or delivery_method_id.partner_id.id,
                 "delivery_method_id": delivery_method_id.id,
-                "transport_condition_id": (
+                "transport_condition_id": prefill_transport_condition
+                or (
                     self.sale_id.default_transport_condition_id.id
                     or partners[1].default_transport_condition_id.id
                     or type_id.default_transport_condition_id.id
                 ),
-                "goods_appearance_id": (
+                "goods_appearance_id": prefill_goods_appearance
+                or (
                     self.sale_id.default_goods_appearance_id.id
                     or partners[1].default_goods_appearance_id.id
                     or type_id.default_goods_appearance_id.id
                 ),
-                "transport_reason_id": (
+                "transport_reason_id": prefill_transport_reason
+                or (
                     self.sale_id.default_transport_reason_id.id
                     or partners[1].default_transport_reason_id.id
                     or type_id.default_transport_reason_id.id
                 ),
-                "transport_method_id": (
+                "transport_method_id": prefill_transport_method
+                or (
                     self.sale_id.default_transport_method_id.id
                     or partners[1].default_transport_method_id.id
                     or type_id.default_transport_method_id.id
                 ),
+                "packages": prefill_packages,
+                "volume": prefill_volume,
+                "volume_uom_id": prefill_volume_uom,
+                "gross_weight": prefill_gross_weight,
+                "net_weight": prefill_net_weight,
+                "net_weight_uom_id": prefill_net_weight_uom,
+                "transport_datetime": prefill_transport_datetime,
             }
         )
 
