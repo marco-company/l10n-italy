@@ -76,24 +76,37 @@ class ReportRegistroIva(models.AbstractModel):
             if not (move_line.tax_line_id or move_line.tax_ids):
                 continue
 
-            if move_line.tax_ids and len(move_line.tax_ids) != 1:
-                raise UserError(
-                    _("Move line %s has too many base taxes") % move_line.name
+            # Filter out taxes that should be excluded from registries before validation
+            if move_line.tax_ids:
+                # Filter out taxes that should be excluded from registries
+                filtered_taxes = move_line.tax_ids.filtered(
+                    lambda tax: not tax.exclude_from_registries
                 )
 
-            if move_line.tax_ids:
-                tax = move_line.tax_ids[0]
+                # Now check if we have too many taxes after filtering
+                if len(filtered_taxes) > 1:
+                    raise UserError(
+                        _("Move line %s has too many base taxes") % move_line.name
+                    )
+                elif len(filtered_taxes) == 0:
+                    # All taxes are excluded, skip this move line
+                    continue
+
+                tax = filtered_taxes[0]
                 is_base = True
             else:
                 tax = move_line.tax_line_id
                 is_base = False
+                # Skip if this tax should be excluded from registries
+                if tax.exclude_from_registries:
+                    continue
 
             if tax.parent_tax_ids and len(tax.parent_tax_ids) == 1:
                 # we group by main tax
                 tax = tax.parent_tax_ids[0]
-
-            if tax.exclude_from_registries:
-                continue
+                # Skip if the parent tax should be excluded from registries
+                if tax.exclude_from_registries:
+                    continue
 
             if not res.get(tax.id):
                 res[tax.id] = {
