@@ -249,6 +249,14 @@ class StockDeliveryNote(models.Model):
         compute="_compute_lines_have_customer_ref",
     )
 
+    # Field to check if lines are aligned with pickings
+    lines_sync_status = fields.Selection(
+        [("synced", "Synchronized"), ("out_of_sync", "Not Synchronized")],
+        string="Lines Sync Status",
+        compute="_compute_lines_sync_status",
+        store=False,
+    )
+
     picking_ids = fields.One2many(
         "stock.picking",
         "delivery_note_id",
@@ -498,6 +506,58 @@ class StockDeliveryNote(models.Model):
                 sdn.company_id.display_ref_customer_dn_report
                 and any(line.sale_order_client_ref for line in sdn.line_ids)
             )
+
+    @api.depends(
+        "line_ids.move_id",
+        "line_ids.is_synchronized",
+        "picking_ids.valid_move_ids",
+        "picking_ids.valid_move_ids.quantity_done",
+    )
+    def _compute_lines_sync_status(self):
+        """Check if delivery note lines are synchronized with pickings"""
+        for delivery_note in self:
+            delivery_note.lines_sync_status = self._check_delivery_note_sync(
+                delivery_note
+            )
+
+    def _check_delivery_note_sync(self, delivery_note):
+        """Helper method to check if a delivery note is synchronized with its pickings"""
+        # Get all valid moves from associated pickings (excludes cancelled moves)
+        picking_moves = delivery_note.mapped("picking_ids.valid_move_ids")
+
+        # Get product lines (lines with move_id are always product lines)
+        product_lines = delivery_note.line_ids.filtered("move_id")
+
+        # Case 1: No lines and no pickings = synchronized
+        if not delivery_note.line_ids and not picking_moves:
+            return "synced"
+
+        # Case 2: No lines but there are pickings = not synchronized
+        if not delivery_note.line_ids and picking_moves:
+            return "out_of_sync"
+
+        # Case 3: No product lines but there are pickings = not synchronized
+        if not product_lines and picking_moves:
+            return "out_of_sync"
+
+        # Case 4: No product lines and no pickings = synchronized
+        if not product_lines and not picking_moves:
+            return "synced"
+
+        # Case 5: Check if move IDs match between DDT and pickings
+        ddt_move_ids = set(product_lines.mapped("move_id.id"))
+        picking_move_ids = set(picking_moves.ids)
+
+        if ddt_move_ids != picking_move_ids:
+            return "out_of_sync"
+
+        # Case 6: Check if all fields match for all product lines
+        for line in product_lines:
+            if not line.is_synchronized:
+                return "out_of_sync"
+
+        # All checks passed = synchronized
+        return "synced"
 
     @api.onchange("picking_type")
     def _onchange_picking_type(self):
@@ -892,6 +952,20 @@ class StockDeliveryNote(models.Model):
 
         self.write({"line_ids": [(0, False, vals) for vals in lines_vals]})
 
+    def _update_detail_lines(self, move_ids):
+        """Update existing detail lines with current move data
+        
+        This method provides an entry point for inheritance and extension.
+        It delegates to the stock.delivery.note.line model method.
+        
+        Returns:
+            recordset: The updated delivery note lines
+        """
+        if not move_ids:
+            return self.env["stock.delivery.note.line"]
+            
+        return self.env["stock.delivery.note.line"]._update_detail_lines(move_ids)
+
     def _delete_detail_lines(self, move_ids):
         if not move_ids:
             return
@@ -903,19 +977,22 @@ class StockDeliveryNote(models.Model):
         self.write({"line_ids": [(2, line.id, False) for line in lines]})
 
     def update_detail_lines(self):
+        """Synchronize delivery note lines with picking moves"""
         for note in self:
-            lines_move_ids = note.mapped("line_ids.move_id").ids
-            pickings_move_ids = note.mapped("picking_ids.valid_move_ids").ids
+            # Skip if delivery note is in done or cancel state
+            if note.state in ["done", "cancel"]:
+                continue
 
-            move_ids_to_create = [
-                line for line in pickings_move_ids if line not in lines_move_ids
-            ]
-            move_ids_to_delete = [
-                line for line in lines_move_ids if line not in pickings_move_ids
-            ]
+            note_lines_moves = note.mapped("line_ids.move_id")
+            pickings_moves = note.mapped("picking_ids.valid_move_ids")
 
-            note._create_detail_lines(move_ids_to_create)
-            note._delete_detail_lines(move_ids_to_delete)
+            moves_to_create = pickings_moves - note_lines_moves
+            moves_to_delete = note_lines_moves - pickings_moves
+            moves_to_update = pickings_moves & note_lines_moves
+
+            note._delete_detail_lines(moves_to_delete.ids)
+            note._update_detail_lines(moves_to_update.ids)
+            note._create_detail_lines(moves_to_create.ids)
 
     @api.model_create_multi
     def create(self, vals_list):

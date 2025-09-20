@@ -85,6 +85,12 @@ class StockDeliveryNoteLine(models.Model):
         default=DOMAIN_INVOICE_STATUSES[0],
         copy=False,
     )
+    is_synchronized = fields.Boolean(
+        string='Synchronized',
+        compute='_compute_is_synchronized',
+        store=False,
+        help='Indicates if this line is synchronized with its move'
+    )
 
     _sql_constraints = [
         (
@@ -197,3 +203,95 @@ class StockDeliveryNoteLine(models.Model):
                 if invoice_status == "upselling"
                 else invoice_status
             )
+
+   
+
+    @api.depends('move_id', 'move_id.quantity_done', 'product_qty', 'price_unit', 'discount', 'tax_ids', 'currency_id', 'invoice_status')
+    def _compute_is_synchronized(self):
+        """Check if this line is synchronized with its move"""
+        for line in self:
+            if not line.move_id or not line.product_id or line.display_type:
+                line.is_synchronized = True  # Skip non-product lines
+                continue
+                
+            # Get expected values from the move
+            prepared_lines = line._prepare_detail_lines([line.move_id])
+            if not prepared_lines:
+                line.is_synchronized = True
+                continue
+                
+            expected_vals = prepared_lines[0]
+            
+            # Remove fields that are not synchronized 
+            expected_vals.pop("move_id", None)
+            expected_vals.pop("name", None)
+            
+            # Check if current line values match expected values
+            is_sync = True
+            for field_name, expected_value in expected_vals.items():
+                current_value = getattr(line, field_name, None)
+                
+                # Convert current value to match expected value format
+                if hasattr(current_value, 'ids'):
+                    # For recordset fields, get the IDs
+                    current_value = current_value.ids
+                
+                # Convert to Odoo command format if we have a list of IDs
+                if current_value and isinstance(current_value, list):
+                    # Check if expected_value is also a list (Many2many) or single ID (Many2one)
+                    if isinstance(expected_value, list):
+                        current_value = [(6, False, current_value)]
+                    else:
+                        # For Many2one fields, use single ID
+                        current_value = current_value[0] if current_value else False
+                
+                # Simple comparison
+                if current_value != expected_value:
+                    is_sync = False
+                    break
+            
+            line.is_synchronized = is_sync
+
+    def update_detail_lines(self):
+        """Update this single line from its associated move"""
+        if not self.move_id or not self.product_id or self.display_type:
+            return
+            
+        # Use the model method to update this line
+        self._update_detail_lines([self.move_id.id])
+
+    @api.model
+    def _update_detail_lines(self, move_ids):
+        """Update existing detail lines with current move data
+        
+        Returns:
+            recordset: The updated delivery note lines
+        """
+        if not move_ids:
+            return self.env["stock.delivery.note.line"]
+
+        moves = self.env["stock.move"].browse(move_ids)
+        prepared_lines = self._prepare_detail_lines(moves)
+        updated_lines = self.env["stock.delivery.note.line"]
+
+        for prepared_vals in prepared_lines:
+            move_id = prepared_vals.get("move_id")
+            if move_id:
+                # Find the corresponding delivery note line
+                line = self.search([
+                    ('move_id', '=', move_id),
+                    ('display_type', '=', False)
+                ])
+                if line and line.product_id:
+                    # Remove move_id as we don't want to change it
+                    prepared_vals.pop("move_id", None)
+
+                    # Remove name field as it might have been manually modified by user
+                    prepared_vals.pop("name", None)
+
+                    # Update the line with remaining values
+                    if prepared_vals:
+                        line.write(prepared_vals)
+                        updated_lines |= line
+
+        return updated_lines

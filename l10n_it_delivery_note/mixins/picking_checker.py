@@ -31,11 +31,13 @@ class StockPickingCheckerMixin(models.AbstractModel):
 
     @api.model
     def _check_pickings_state(self, pickings):
-        if pickings.filtered(lambda p: p.state != DONE_PICKING_STATE):
+        if pickings.filtered(lambda p: p.state != DONE_PICKING_STATE and not p.delivery_note_before_delivery):
             raise ValidationError(
                 _(
                     "At least one picking you've selected doesn't "
-                    "appear to be completed."
+                    "appear to be completed. If you want to use the "
+                    "delivery note before delivery, please enable "
+                    "it in the picking type."
                 )
             )
 

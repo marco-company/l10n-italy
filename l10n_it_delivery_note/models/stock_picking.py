@@ -101,6 +101,7 @@ class StockPicking(models.Model):
     can_be_invoiced = fields.Boolean(compute="_compute_boolean_flags")
     dn_supplier_number = fields.Char(string="Supplier DN Number", copy=False)
     dn_supplier_date = fields.Date(string="Supplier DN Date", copy=False)
+    delivery_note_before_delivery = fields.Boolean(compute="_compute_boolean_flags")
 
     @property
     def _delivery_note_fields(self):
@@ -125,8 +126,9 @@ class StockPicking(models.Model):
         )
 
         for picking in self:
+            picking.delivery_note_before_delivery = picking.picking_type_id.delivery_note_before_delivery
             picking.use_delivery_note = (
-                not from_delivery_note and picking.state == DONE_PICKING_STATE
+                not from_delivery_note and (picking.state == DONE_PICKING_STATE or picking.delivery_note_before_delivery)
             )
 
             picking.delivery_note_visible = use_advanced_behaviour

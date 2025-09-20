@@ -19,6 +19,7 @@
                 <field name="sales_transport_check" invisible="True" />
                 <field name="can_change_number" invisible="True" />
                 <field name="show_product_information" invisible="True" />
+                <field name="lines_sync_status" invisible="True" />
                 <header>
                     <button
                         name="action_draft"
@@ -69,12 +70,24 @@
                         states="confirm,invoiced,done"
                         string="Cancel"
                     />
+                    <button
+                        name="update_detail_lines"
+                        type="object"
+                        class="btn-primary"
+                        string="Update Lines"
+                        attrs="{'invisible': [('lines_sync_status', '=', 'synced')]}"
+                    />
                     <field
                         name="state"
                         widget="statusbar"
                         statusbar_visible="draft,confirm"
                     />
                 </header>
+                <div class="alert alert-warning" role="alert" 
+                     attrs="{'invisible': [('lines_sync_status', '=', 'synced')]}">
+                    <strong>Warning!</strong> Delivery note lines are not synchronized with pickings. 
+                    Click "Update Lines" to synchronize.
+                </div>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button
@@ -227,12 +240,14 @@
                                 <tree
                                     editable="bottom"
                                     decoration-info="(not display_type and invoice_status == 'to invoice')"
+                                    decoration-warning="(not display_type and not is_synchronized)"
                                 >
                                     <field name="currency_id" invisible="True" />
                                     <field name="display_type" invisible="True" />
                                     <field name="move_id" invisible="True" />
                                     <field name="sale_line_id" invisible="True" />
                                     <field name="invoice_status" invisible="True" />
+                                    <field name="is_synchronized" invisible="True" />
                                     <control>
                                         <create
                                             string="Add a section"
@@ -244,6 +259,14 @@
                                         />
                                     </control>
                                     <field name="sequence" widget="handle" />
+                                    <button
+                                        type="object"
+                                        name="update_detail_lines"
+                                        icon="fa-refresh"
+                                        title="Update from move"
+                                        attrs="{'invisible': ['|', ('display_type', '!=', False), ('is_synchronized', '=', True)]}"
+                                        class="btn-link"
+                                    />
                                     <field
                                         name="product_id"
                                         attrs="{'readonly': [('move_id', '!=', False)]}"
