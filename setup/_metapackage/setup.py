@@ -41,6 +41,7 @@ setuptools.setup(
         'odoo-addon-l10n_it_fatturapa_out_rc>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_fatturapa_out_sp>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_fatturapa_out_stamp>=16.0dev,<16.1dev',
+        'odoo-addon-l10n_it_fatturapa_out_triple_discount>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_fatturapa_out_wt>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_fatturapa_pec>=16.0dev,<16.1dev',
         'odoo-addon-l10n_it_fatturapa_sale>=16.0dev,<16.1dev',
