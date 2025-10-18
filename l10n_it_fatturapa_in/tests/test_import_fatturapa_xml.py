@@ -627,6 +627,25 @@ class TestFatturaPAXMLValidation(FatturapaCommon):
         self.assertEqual(invoice.e_invoice_amount_untaxed, -20.0)
         self.assertEqual(invoice.e_invoice_amount_tax, -4.4)
 
+    def test_33_negative_tax_rate(self):
+        """When importing with Tax Rate level,
+        negative tax rate is imported in a line with negative amount."""
+        res = self.run_wizard(
+            "test33_tax_rate",
+            "IT01234567890_FPR07_bill.xml",
+            wiz_values={
+                "e_invoice_detail_level": "1",
+            },
+        )
+        invoice = self.invoice_model.search(res["domain"])
+        self.assertEqual(invoice.move_type, "in_invoice")
+        # The negative line is also the one
+        # with the exigible tax (0 amount)
+        negative_line = invoice.invoice_line_ids.filtered(
+            lambda line: not line.tax_ids.amount
+        )
+        self.assertEqual(negative_line.price_unit, -10)
+
     def test_34_xml_import(self):
         # No Ritenuta lines set
         res = self.run_wizard("test34", "IT01234567890_FPR08.xml")
@@ -971,6 +990,21 @@ class TestFatturaPAXMLValidation(FatturapaCommon):
         self.assertEqual(invoice.invoice_line_ids[0].quantity, 10.0)
         self.assertEqual(invoice.invoice_line_ids[0].price_subtotal, 1.5)
         self.assertEqual(invoice.move_type, "in_refund")
+
+    def test_xml_import_bank_overwrite(self):
+        """
+        Test: Check if the bank account is overwritten by the XML file
+        """
+        bank = self.env["res.bank"].create(
+            [
+                {
+                    "name": "Bank Test 001",
+                    "bic": "TESTTES1",
+                }
+            ]
+        )
+        self.run_wizard("test56", "IT02780790107_11004_bank.xml")
+        self.assertEqual(bank.name, "Bank Test 001")
 
     def test_01_xml_link(self):
         """

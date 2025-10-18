@@ -307,6 +307,7 @@ class WizardImportFatturapa(models.TransientModel):
                 ),
                 "eori_code": DatiAnagrafici.Anagrafica.CodEORI or "",
                 "country_id": country_id,
+                "company_id": self.env.company.id,
             }
             if DatiAnagrafici.Anagrafica.Nome:
                 vals["firstname"] = DatiAnagrafici.Anagrafica.Nome
@@ -667,7 +668,7 @@ class WizardImportFatturapa(models.TransientModel):
                 "name": f"Riepilogo Aliquota {line.AliquotaIVA}",
                 "sequence": nline,
                 "account_id": credit_account_id,
-                "price_unit": float(abs(line.ImponibileImporto)),
+                "price_unit": float(line.ImponibileImporto),
             }
         )
         return retLine
@@ -923,7 +924,7 @@ class WizardImportFatturapa(models.TransientModel):
                                     "acc_number": iban,
                                     "partner_id": partner_id,
                                     "bank_id": bank.id,
-                                    "bank_name": dline.IstitutoFinanziario or bank.name,
+                                    "bank_name": bank.name or dline.IstitutoFinanziario,
                                     "bank_bic": dline.BIC or bank.bic,
                                 }
                             ).id

@@ -90,7 +90,7 @@ class TestAssets(Common):
             .create(
                 {
                     "management_type": "dismiss",
-                    "asset_id": asset.id,
+                    "l10n_it_asset_id": asset.id,
                 }
             )
         )
@@ -128,7 +128,7 @@ class TestAssets(Common):
             .create(
                 {
                     "management_type": "dismiss",
-                    "asset_id": asset.id,
+                    "l10n_it_asset_id": asset.id,
                     "dismiss_date": sale_invoice.invoice_date,
                 }
             )
@@ -204,7 +204,7 @@ class TestAssets(Common):
             .create(
                 {
                     "management_type": "dismiss",
-                    "asset_id": asset.id,
+                    "l10n_it_asset_id": asset.id,
                 }
             )
         )
@@ -342,7 +342,7 @@ class TestAssets(Common):
                 {
                     "management_type": "update",
                     "category_id": self.asset_category_1.id,
-                    "asset_id": asset.id,
+                    "l10n_it_asset_id": asset.id,
                     "depreciation_type_ids": [Command.set(civ_type.ids)],
                 }
             )
@@ -449,7 +449,7 @@ class TestAssets(Common):
                 {
                     "management_type": "update",
                     "category_id": self.asset_category_1.id,
-                    "asset_id": asset.id,
+                    "l10n_it_asset_id": asset.id,
                     "depreciation_type_ids": [Command.set(civ_type.ids)],
                 }
             )
@@ -485,7 +485,7 @@ class TestAssets(Common):
             entry,
             "update",
             wiz_values={
-                "asset_id": asset,
+                "l10n_it_asset_id": asset,
             },
         )
 
@@ -511,7 +511,7 @@ class TestAssets(Common):
             entry,
             "update",
             wiz_values={
-                "asset_id": asset,
+                "l10n_it_asset_id": asset,
             },
         )
 
@@ -754,7 +754,7 @@ class TestAssets(Common):
             sale_invoice,
             "partial_dismiss",
             wiz_values={
-                "asset_id": asset,
+                "l10n_it_asset_id": asset,
                 "asset_purchase_amount": partial_dismiss_purchase_amount,
                 "depreciated_fund_amount": partial_dismiss_fund_amount,
             },
@@ -770,7 +770,9 @@ class TestAssets(Common):
         report = self._get_report(report_date, "journal")
 
         # Assert
-        asset_report = report.report_asset_ids.filtered(lambda ar: ar.asset_id == asset)
+        asset_report = report.report_l10n_it_asset_ids.filtered(
+            lambda ar: ar.l10n_it_asset_id == asset
+        )
         asset_report_depreciation_line = (
             asset_report.report_depreciation_ids.report_depreciation_year_line_ids
         )
@@ -782,9 +784,11 @@ class TestAssets(Common):
         manager_user = self.user
         account_user = self.account_user
         forbidden_user = self.env.ref("base.user_demo")
-        forbidden_user.groups_id -= self.env.ref(
-            "l10n_it_asset_management.group_asset_user"
-        ) | self.env.ref("account.group_account_manager")
+        forbidden_user.groups_id -= (
+            self.env.ref("l10n_it_asset_management.group_asset_user")
+            | self.env.ref("account.group_account_manager")
+            | self.env.ref("l10n_it_asset_management.group_account_invoice_assets")
+        )
         self.assertFalse(
             forbidden_user.has_group("l10n_it_asset_management.group_asset_user")
         )
