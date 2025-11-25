@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 10:03+0000\n"
-"PO-Revision-Date: 2025-07-30 13:12+0000\n"
+"PO-Revision-Date: 2025-11-25 15:42+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -125,7 +125,7 @@ msgstr "Impostazioni di configurazione"
 #. module: l10n_it_fatturapa_out
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
 msgid "Configuration"
-msgstr ""
+msgstr "Configurazione"
 
 #. module: l10n_it_fatturapa_out
 #: model:ir.model,name:l10n_it_fatturapa_out.model_res_partner
@@ -331,7 +331,7 @@ msgstr "Dimensione file"
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_move__fatturapa_payment_method_id
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_payment__fatturapa_payment_method_id
 msgid "Fiscal Payment Method"
-msgstr ""
+msgstr "Metodo di pagamento fiscale"
 
 #. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_bank_statement_line__fatturapa_payment_method_id
@@ -341,13 +341,15 @@ msgid ""
 "Fiscal Payment Method used in the e-invoice, defaults to the Payment Term's "
 "Fiscal Payment Method."
 msgstr ""
+"Metodo di pagamento fiscale utilizzato nella e-fattura, predefinito come il "
+"metodo di pagamento fiscale del termine di pagamento."
 
 #. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_bank_statement_line__fatturapa_payment_term_id
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_move__fatturapa_payment_term_id
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_payment__fatturapa_payment_term_id
 msgid "Fiscal Payment Term"
-msgstr ""
+msgstr "Termini di pagamento fiscali"
 
 #. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_bank_statement_line__fatturapa_payment_term_id
@@ -357,6 +359,8 @@ msgid ""
 "Fiscal Payment Term used in the e-invoice, defaults to the Payment Term's "
 "Fiscal Payment Term."
 msgstr ""
+"Termine di pagamento fiscale nella e-fattura, predefinito come termine di "
+"pagamento fiscale del termine di pagamento."
 
 #. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_fatturapa_attachment_out__message_follower_ids
@@ -454,7 +458,7 @@ msgstr "Contenuto indicizzato"
 #: code:addons/l10n_it_fatturapa_out/models/account.py:0
 #, python-format
 msgid "Invoice %(name)s: Fiscal Payment Method must be set."
-msgstr ""
+msgstr "Fattura %(name)s: il metodo di pagamento fiscale deve essere impostato."
 
 #. module: l10n_it_fatturapa_out
 #. odoo-python
@@ -462,6 +466,7 @@ msgstr ""
 #, python-format
 msgid "Invoice %(name)s: Fiscal Payment Term must be set."
 msgstr ""
+"Fattura %(name)s: il termine di pagamento fiscale deve essere impostato."
 
 #. module: l10n_it_fatturapa_out
 #. odoo-python
@@ -708,7 +713,7 @@ msgstr "Nome risorsa"
 #. module: l10n_it_fatturapa_out
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
 msgid "Result"
-msgstr ""
+msgstr "Risultato"
 
 #. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_fatturapa_attachment_out__att_name
