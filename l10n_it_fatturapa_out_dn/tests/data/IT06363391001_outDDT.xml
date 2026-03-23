@@ -120,5 +120,13 @@
                 <Imposta>0.30</Imposta>
             </DatiRiepilogo>
         </DatiBeniServizi>
+        <DatiPagamento>
+            <CondizioniPagamento>TP02</CondizioniPagamento>
+            <DettaglioPagamento>
+                <ModalitaPagamento>MP05</ModalitaPagamento>
+                <DataScadenzaPagamento>2019-08-07</DataScadenzaPagamento>
+                <ImportoPagamento>2.30</ImportoPagamento>
+            </DettaglioPagamento>
+        </DatiPagamento>
     </FatturaElettronicaBody>
 </ns1:FatturaElettronica>

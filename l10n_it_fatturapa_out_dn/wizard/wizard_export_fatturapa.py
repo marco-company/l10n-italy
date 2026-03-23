@@ -55,9 +55,11 @@ class WizardExportFatturapa(models.TransientModel):
                 "DataDDT": delivery_note.date,
             }
             e_invoice_lines = self.get_e_invoice_lines(invoice)
-            e_invoice_delivery_note_lines = e_invoice_lines.filtered(
-                lambda l: l.delivery_note_id == delivery_note
-            )
+
+            def _filterfn(li, delivery_note=delivery_note):
+                return li.delivery_note_id == delivery_note
+
+            e_invoice_delivery_note_lines = e_invoice_lines.filtered(_filterfn)
             if e_invoice_delivery_note_lines:
                 # RiferimentoNumeroLinea should not be populated
                 # if all the lines of the invoice

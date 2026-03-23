@@ -39,7 +39,8 @@ class TestFatturaOutDN(FatturaPACommon):
 
         product_form = Form(cls.env["product.product"])
         product_form.name = "Test product"
-        product_form.type = "product"
+        product_form.detailed_type = "product"
+        product_form.invoice_policy = "delivery"
         cls.product = product_form.save()
 
         cls.delivery_note_outgoing_type = cls.env["stock.delivery.note.type"].search(
@@ -51,6 +52,9 @@ class TestFatturaOutDN(FatturaPACommon):
         # Create and confirm the sale order
         sales_order_form = Form(self.env["sale.order"])
         sales_order_form.partner_id = partner
+        sales_order_form.payment_term_id = self.env.ref(
+            "account.account_payment_term_immediate"
+        )
         for product in products:
             with sales_order_form.order_line.new() as line:
                 line.product_id = product
@@ -60,16 +64,18 @@ class TestFatturaOutDN(FatturaPACommon):
 
         # Validate the picking
         picking = sales_order.picking_ids
-        picking.move_lines[0].quantity_done = 1
+        picking.move_ids[0].quantity_done = 1
         picking.button_validate()
 
         # Invoice the delivery note
         delivery_note = picking.delivery_note_id
+        self.assertTrue(delivery_note.type_id in self.delivery_note_outgoing_type)
         delivery_note.date = date
         delivery_note.action_confirm()
         delivery_note.action_invoice()
 
         invoice = sales_order.invoice_ids
+        invoice.related_documents = False
         return sales_order, delivery_note, invoice
 
     def test_01_invoice_delivery(self):
@@ -89,11 +95,10 @@ class TestFatturaOutDN(FatturaPACommon):
             with invoice_form.invoice_line_ids.new() as line:
                 line.product_id = self.product
             invoice_form.save()
-            self.set_sequences(10, invoice_date)
+            # we don't want to really depend on defaults for the name, here
+            invoice.name = "INV/2019/08/0001"
             invoice.action_post()
-            wizard = self.wizard_model.with_context({"active_ids": invoice.ids}).create(
-                {}
-            )
+            wizard = self.wizard_model.with_context(active_ids=invoice.ids).create({})
             res = wizard.exportFatturaPA()
         attachment = self.attach_model.browse(res["res_id"])
         self.set_e_invoice_file_id(attachment, "IT06363391001_outDDT.xml")
