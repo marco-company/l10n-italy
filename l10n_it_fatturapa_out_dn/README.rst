@@ -17,21 +17,21 @@ ITA - Fattura elettronica - Emissione - DDT
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fl10n--italy-lightgray.png?logo=github
-    :target: https://github.com/OCA/l10n-italy/tree/14.0/l10n_it_fatturapa_out_dn
+    :target: https://github.com/OCA/l10n-italy/tree/16.0/l10n_it_fatturapa_out_dn
     :alt: OCA/l10n-italy
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/l10n-italy-14-0/l10n-italy-14-0-l10n_it_fatturapa_out_dn
+    :target: https://translation.odoo-community.org/projects/l10n-italy-16-0/l10n-italy-16-0-l10n_it_fatturapa_out_dn
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/l10n-italy&target_branch=14.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/l10n-italy&target_branch=16.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 **Italiano**
 
-Questo modulo consente di aggiungere le informazione relative ai DDT al file XML
-della fattura elettronica versione 1.6.
+Questo modulo consente di aggiungere le informazione relative ai DDT al
+file XML della fattura elettronica versione 1.6.
 
 https://www.fatturapa.gov.it/export/documenti/Specifiche_tecniche_del_formato_FatturaPA_V1.3.1.pdf
 
@@ -41,8 +41,8 @@ https://www.fatturapa.gov.it/it/sistemainterscambio/cose-il-sdi/
 
 **English**
 
-This module allows you to add DDT information to the Electronic Invoice XML file
-version 1.6
+This module allows you to add DDT information to the Electronic Invoice
+XML file version 1.6
 
 https://www.fatturapa.gov.it/export/documenti/Specifiche_tecniche_del_formato_FatturaPA_V1.3.1.pdf
 
@@ -58,10 +58,13 @@ https://www.fatturapa.gov.it/en/
 Known issues / Roadmap
 ======================
 
-There are a couple of minor issues since `l10n_it_delivery_note` only links a `Note` line of the invoice to the delivery note:
+There are a couple of minor issues since l10n_it_delivery_note only
+links a Note line of the invoice to the delivery note:
 
-* RiferimentoNumeroLinea refers to a descriptive line, but it should enumerate (at least) the products lines
-* RiferimentoNumeroLinea is always populated, but it should only be populated when the linked lines are not all the invoice lines
+- RiferimentoNumeroLinea refers to a descriptive line, but it should
+  enumerate (at least) the products lines
+- RiferimentoNumeroLinea is always populated, but it should only be
+  populated when the linked lines are not all the invoice lines
 
 Bug Tracker
 ===========
@@ -69,7 +72,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/l10n-italy/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/l10n-italy/issues/new?body=module:%20l10n_it_fatturapa_out_dn%0Aversion:%2014.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/l10n-italy/issues/new?body=module:%20l10n_it_fatturapa_out_dn%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -77,20 +80,21 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Marco Colombo
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Marco Colombo <https://github.com/TheMule71>
-* `TAKOBI <https://takobi.online>`_:
+- Marco Colombo
+  <`https://github.com/TheMule71\\> <https://github.com/TheMule71\>>`__
+- `TAKOBI <https://takobi.online>`__:
 
-  * Simone Rubino <sir@takobi.online>
+  - Simone Rubino <sir@takobi.online>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -102,6 +106,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/l10n-italy <https://github.com/OCA/l10n-italy/tree/14.0/l10n_it_fatturapa_out_dn>`_ project on GitHub.
+This module is part of the `OCA/l10n-italy <https://github.com/OCA/l10n-italy/tree/16.0/l10n_it_fatturapa_out_dn>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

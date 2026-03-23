@@ -10,7 +10,7 @@ class WizardExportFatturapa(models.TransientModel):
 
     @api.model
     def default_get(self, fields):
-        res = super(WizardExportFatturapa, self).default_get(fields)
+        res = super().default_get(fields)
         invoice_ids = self.env.context.get("active_ids", False)
         invoices = self.env["account.move"].browse(invoice_ids)
         # enable option by default if any invoice is connected to a dn

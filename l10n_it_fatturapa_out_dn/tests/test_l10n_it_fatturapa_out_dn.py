@@ -48,7 +48,6 @@ class TestFatturaOutDN(FatturaPACommon):
         cls.delivery_note_outgoing_type.sequence_id.prefix = "DDT/"
 
     def _create_so_dn_invoice(self, partner, products, date):
-
         # Create and confirm the sale order
         sales_order_form = Form(self.env["sale.order"])
         sales_order_form.partner_id = partner
