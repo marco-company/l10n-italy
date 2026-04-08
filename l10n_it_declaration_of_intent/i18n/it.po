@@ -96,8 +96,8 @@ msgstr "Annulla"
 #. module: l10n_it_declaration_of_intent
 #: model:ir.model.fields.selection,name:l10n_it_declaration_of_intent.selection__l10n_it_declaration_of_intent_declaration__state__close
 #: model_terms:ir.ui.view,arch_db:l10n_it_declaration_of_intent.declaration_of_intent_search
-msgid "Close"
-msgstr "Chiusa"
+msgid "Closed"
+msgstr ""
 
 #. module: l10n_it_declaration_of_intent
 #: model:ir.model,name:l10n_it_declaration_of_intent.model_res_company
@@ -614,6 +614,9 @@ msgstr "Limite annuale per le dichiarazioni"
 #: model_terms:ir.ui.view,arch_db:l10n_it_declaration_of_intent.select_manually_declarations_wizard
 msgid "or"
 msgstr "o"
+
+#~ msgid "Close"
+#~ msgstr "Chiusa"
 
 #~ msgid "Date"
 #~ msgstr "Data"
