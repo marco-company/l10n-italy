@@ -61,7 +61,7 @@ addon | version | maintainers | summary
 [l10n_it_fatturapa_sale](l10n_it_fatturapa_sale/) | 16.0.1.0.1 |  | Aggiunge alcuni dati per la fatturazione elettronica nell'ordine di vendita
 [l10n_it_fatturapa_sdicoop](l10n_it_fatturapa_sdicoop/) | 16.0.1.1.0 |  | Invio fatture elettroniche tramite SDICoop
 [l10n_it_financial_statement_eu](l10n_it_financial_statement_eu/) | 16.0.1.0.1 | <a href='https://github.com/mktsrl'><img src='https://github.com/mktsrl.png' width='32' height='32' style='border-radius:50%;' alt='mktsrl'/></a> | ITA - Bilancio UE con XBRL
-[l10n_it_financial_statements_report](l10n_it_financial_statements_report/) | 16.0.1.0.6 |  | Rendicontazione .pdf e .xls per stato patrimoniale e conto economico a sezioni contrapposte
+[l10n_it_financial_statements_report](l10n_it_financial_statements_report/) | 16.0.1.0.7 |  | Rendicontazione .pdf e .xls per stato patrimoniale e conto economico a sezioni contrapposte
 [l10n_it_fiscal_document_type](l10n_it_fiscal_document_type/) | 16.0.1.1.0 |  | ITA - Tipi di documento fiscale per dichiarativi
 [l10n_it_fiscal_payment_term](l10n_it_fiscal_payment_term/) | 16.0.1.0.0 |  | Condizioni di pagamento delle fatture elettroniche
 [l10n_it_fiscalcode](l10n_it_fiscalcode/) | 16.0.1.0.4 |  | ITA - Codice fiscale
