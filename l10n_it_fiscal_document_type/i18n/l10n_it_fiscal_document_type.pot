@@ -97,6 +97,7 @@ msgstr ""
 #. module: l10n_it_fiscal_document_type
 #. odoo-python
 #: code:addons/l10n_it_fiscal_document_type/models/journal.py:0
+#: code:addons/l10n_it_fiscal_document_type/models/journal.py:0
 #, python-format
 msgid ""
 "Journal %(name)s can be linked to only 1 fiscal document type (found in "
