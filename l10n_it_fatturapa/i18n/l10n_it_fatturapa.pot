@@ -106,7 +106,6 @@ msgstr ""
 #. module: l10n_it_fatturapa
 #. odoo-python
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid ""
 "As a Public Administration, partner %s IPA Code must be 6 characters long."
@@ -114,7 +113,6 @@ msgstr ""
 
 #. module: l10n_it_fatturapa
 #. odoo-python
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "As a natural person, partner %s must have Name and Surname."
@@ -159,7 +157,6 @@ msgstr ""
 
 #. module: l10n_it_fatturapa
 #. odoo-python
-#: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
 #: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
 #, python-format
 msgid "Base64 encoded file %s."
@@ -232,7 +229,6 @@ msgstr ""
 #. module: l10n_it_fatturapa
 #. odoo-python
 #: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
-#: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
 #, python-format
 msgid "Corrupted attachment %s."
 msgstr ""
@@ -282,7 +278,6 @@ msgstr ""
 #. module: l10n_it_fatturapa
 #. odoo-python
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "Customer %s: city is needed for XML generation."
 msgstr ""
@@ -290,14 +285,12 @@ msgstr ""
 #. module: l10n_it_fatturapa
 #. odoo-python
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "Customer %s: country is needed for XML generation."
 msgstr ""
 
 #. module: l10n_it_fatturapa
 #. odoo-python
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "Customer %s: street is needed for XML generation."
@@ -731,7 +724,6 @@ msgstr ""
 #. module: l10n_it_fatturapa
 #. odoo-python
 #: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
-#: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
 #, python-format
 msgid "Invalid xml %s."
 msgstr ""
@@ -750,14 +742,12 @@ msgstr ""
 #. module: l10n_it_fatturapa
 #. odoo-python
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "Italian partner %s must have VAT Number or Fiscal Code."
 msgstr ""
 
 #. module: l10n_it_fatturapa
 #. odoo-python
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "Italian partner %s: ZIP is needed for XML generation."
@@ -1049,14 +1039,12 @@ msgstr ""
 #. module: l10n_it_fatturapa
 #. odoo-python
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "Partner %(name)s Addressee Code must be 7 characters long."
 msgstr ""
 
 #. module: l10n_it_fatturapa
 #. odoo-python
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid ""
@@ -1066,7 +1054,6 @@ msgstr ""
 
 #. module: l10n_it_fatturapa
 #. odoo-python
-#: code:addons/l10n_it_fatturapa/models/partner.py:0
 #: code:addons/l10n_it_fatturapa/models/partner.py:0
 #, python-format
 msgid "Partner %(name)s must have Addressee Code. Use %(code)s if unknown"
@@ -1536,7 +1523,6 @@ msgstr ""
 
 #. module: l10n_it_fatturapa
 #. odoo-python
-#: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
 #: code:addons/l10n_it_fatturapa/models/ir_attachment.py:0
 #, python-format
 msgid "Unexpected root element: %s"
