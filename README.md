@@ -26,7 +26,7 @@ addon | version | maintainers | summary
 [fiscal_epos_print](fiscal_epos_print/) | 16.0.1.0.1 | <a href='https://github.com/eLBati'><img src='https://github.com/eLBati.png' width='32' height='32' style='border-radius:50%;' alt='eLBati'/></a> | ePOS-Print XML Fiscal Printer Driver - Stampanti Epson compatibili: FP81II, FP90III
 [l10n_it_abicab](l10n_it_abicab/) | 16.0.1.0.1 | <a href='https://github.com/Borruso'><img src='https://github.com/Borruso.png' width='32' height='32' style='border-radius:50%;' alt='Borruso'/></a> | Base Bank ABI/CAB codes
 [l10n_it_accompanying_invoice](l10n_it_accompanying_invoice/) | 16.0.1.0.1 |  | Stampa della fattura accompagnatoria
-[l10n_it_account](l10n_it_account/) | 16.0.1.4.0 |  | Modulo base usato come dipendenza di altri moduli contabili
+[l10n_it_account](l10n_it_account/) | 16.0.2.0.0 |  | Modulo base usato come dipendenza di altri moduli contabili
 [l10n_it_account_stamp](l10n_it_account_stamp/) | 16.0.1.3.2 |  | Gestione automatica dell'imposta di bollo
 [l10n_it_account_tax_kind](l10n_it_account_tax_kind/) | 16.0.1.0.1 |  | Gestione natura delle aliquote IVA
 [l10n_it_amount_to_text](l10n_it_amount_to_text/) | 16.0.1.0.0 |  | Localizza le valute in italiano per amount_to_text
@@ -76,7 +76,7 @@ addon | version | maintainers | summary
 [l10n_it_rea](l10n_it_rea/) | 16.0.1.0.0 |  | Gestisce i campi del Repertorio Economico Amministrativo
 [l10n_it_reverse_charge](l10n_it_reverse_charge/) | 16.0.1.0.11 |  | Inversione contabile
 [l10n_it_reverse_charge_start_end_dates](l10n_it_reverse_charge_start_end_dates/) | 16.0.1.0.0 |  | Gestione delle date di competenza per le autofatture in reverse charge
-[l10n_it_riba](l10n_it_riba/) | 16.0.1.10.1 |  | Ricevute bancarie
+[l10n_it_riba_oca](l10n_it_riba_oca/) | 16.0.1.10.1 |  | Ricevute bancarie
 [l10n_it_sct_cbi](l10n_it_sct_cbi/) | 16.0.1.0.2 | <a href='https://github.com/monen17'><img src='https://github.com/monen17.png' width='32' height='32' style='border-radius:50%;' alt='monen17'/></a> | Usare gli standard CBI per SEPA Credit Transfer
 [l10n_it_sdi_channel](l10n_it_sdi_channel/) | 16.0.1.1.2 | <a href='https://github.com/sergiocorato'><img src='https://github.com/sergiocorato.png' width='32' height='32' style='border-radius:50%;' alt='sergiocorato'/></a> | Aggiunge il canale di invio/ricezione dei file XML attraverso lo SdI
 [l10n_it_split_payment](l10n_it_split_payment/) | 16.0.1.1.1 |  | Scissione pagamenti
