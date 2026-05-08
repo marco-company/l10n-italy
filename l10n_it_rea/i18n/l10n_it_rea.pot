@@ -16,6 +16,7 @@ msgstr ""
 #. module: l10n_it_rea
 #. odoo-python
 #: code:addons/l10n_it_rea/models/res_company.py:0
+#: code:addons/l10n_it_rea/models/res_company.py:0
 #, python-format
 msgid ""
 "%(rea_office.code)s - %(rea_code)s / Share Cap. %(rea_capital)s € / "
@@ -94,6 +95,7 @@ msgstr ""
 
 #. module: l10n_it_rea
 #. odoo-python
+#: code:addons/l10n_it_rea/models/res_partner.py:0
 #: code:addons/l10n_it_rea/models/res_partner.py:0
 #, python-format
 msgid ""
