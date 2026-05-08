@@ -91,7 +91,6 @@ msgstr ""
 #. module: l10n_it_fiscalcode
 #. odoo-python
 #: code:addons/l10n_it_fiscalcode/wizard/compute_fc.py:0
-#: code:addons/l10n_it_fiscalcode/wizard/compute_fc.py:0
 #, python-format
 msgid ""
 "Existing fiscal code %(partner_fiscalcode)s is different from the computed "
@@ -194,7 +193,6 @@ msgstr ""
 #. module: l10n_it_fiscalcode
 #. odoo-python
 #: code:addons/l10n_it_fiscalcode/wizard/compute_fc.py:0
-#: code:addons/l10n_it_fiscalcode/wizard/compute_fc.py:0
 #, python-format
 msgid "National code is missing"
 msgstr ""
@@ -211,7 +209,6 @@ msgstr ""
 
 #. module: l10n_it_fiscalcode
 #. odoo-python
-#: code:addons/l10n_it_fiscalcode/wizard/compute_fc.py:0
 #: code:addons/l10n_it_fiscalcode/wizard/compute_fc.py:0
 #, python-format
 msgid "One or more fields are missing"
@@ -241,14 +238,12 @@ msgstr ""
 #. module: l10n_it_fiscalcode
 #. odoo-python
 #: code:addons/l10n_it_fiscalcode/model/res_partner.py:0
-#: code:addons/l10n_it_fiscalcode/model/res_partner.py:0
 #, python-format
 msgid "The fiscal code '%s' isn't valid."
 msgstr ""
 
 #. module: l10n_it_fiscalcode
 #. odoo-python
-#: code:addons/l10n_it_fiscalcode/model/res_partner.py:0
 #: code:addons/l10n_it_fiscalcode/model/res_partner.py:0
 #, python-format
 msgid "The fiscal code '%s' must have 16 characters."
