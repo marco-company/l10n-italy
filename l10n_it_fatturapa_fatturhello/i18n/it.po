@@ -6,33 +6,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-05-11 16:45+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "Decorazione eccezione attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Stato attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_type_icon
 msgid "Activity Type Icon"
-msgstr ""
+msgstr "Icona tipo attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_fatturapa_attachment_out__fatturhello_last_processed_status_datetime
@@ -40,65 +42,68 @@ msgid ""
 "All the status updates more recent than this date will be processed.\n"
 "If empty, all the status updates will be processed."
 msgstr ""
+"Tutti gli aggiornamenti di stato successivi a questa data verranno "
+"elaborati.\n"
+"Se il campo è vuoto, verranno elaborati tutti gli aggiornamenti di stato."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_sdi_channel_form
 msgid "Base URL"
-msgstr ""
+msgstr "URL base"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Base URL is mandatory."
-msgstr ""
+msgstr "L'URL base è obbligatorio."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.fatturhello_login_view_form
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__channel_id
 msgid "Channel"
-msgstr ""
+msgstr "Canale"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_sdi_channel__channel_type
 msgid "Channels (Pec, Web, Sftp) could be provided by external modules."
-msgstr ""
+msgstr "I canali (PEC, Web, SFTP) possono essere forniti da moduli esterni."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model,name:l10n_it_fatturapa_fatturhello.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Aziende"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/wizards/login.py:0
 #, python-format
 msgid "Configure the base URL in order to login"
-msgstr ""
+msgstr "Configurare l'URL base per accedere"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.fatturhello_login_view_form
 msgid "Confirm"
-msgstr ""
+msgstr "Conferma"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
@@ -109,28 +114,31 @@ msgid ""
 "Response is:\n"
 "%s"
 msgstr ""
+"Scaricamento fallito.\n"
+"La risposta è:\n"
+"%s"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_account_bank_statement_line__fatturapa_state
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_account_move__fatturapa_state
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_account_payment__fatturapa_state
 msgid "E-invoice State"
-msgstr ""
+msgstr "Stato e-fattura"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model,name:l10n_it_fatturapa_fatturhello.model_sdi_channel
 msgid "ES channel"
-msgstr ""
+msgstr "Canale SdI"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__channel_type
 msgid "ES channel type"
-msgstr ""
+msgstr "Tipo canale SdI"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model,name:l10n_it_fatturapa_fatturhello.model_fatturapa_attachment_out
 msgid "Electronic Invoice"
-msgstr ""
+msgstr "Fattura elettronica"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields.selection,name:l10n_it_fatturapa_fatturhello.selection__sdi_channel__channel_type__fatturhello
@@ -138,42 +146,42 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_fatturapa_out_attachment_form
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_sdi_channel_form
 msgid "Fatturhello"
-msgstr ""
+msgstr "Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__fatturhello_base_url
 msgid "Fatturhello Base Url"
-msgstr ""
+msgstr "URL base Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_res_company__fatturhello_identifier
 msgid "Fatturhello Identifier"
-msgstr ""
+msgstr "Identificatore Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_res_company__fatturhello_last_downloaded_e_bill_identifer
 msgid "Fatturhello Last Downloaded E Bill Identifer"
-msgstr ""
+msgstr "Identificatore ultima e-fattura Fatturhello scaricata"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__fatturhello_login_authtoken
 msgid "Fatturhello Login Authtoken"
-msgstr ""
+msgstr "Authtoken accesso Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__fatturhello_login_authtoken_create_date
 msgid "Fatturhello Login Authtoken Create Date"
-msgstr ""
+msgstr "Data creazione authtoken accesso Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_fatturapa_attachment_out__fatturhello_protocol
 msgid "Fatturhello Protocol"
-msgstr ""
+msgstr "Protocollo Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__fatturhello_username
 msgid "Fatturhello Username"
-msgstr ""
+msgstr "Nome utente Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_res_company__fatturhello_last_downloaded_e_bill_identifer
@@ -182,78 +190,86 @@ msgid ""
 "All the E-Bills subsequent this one will be downloaded during the CRON execution.\n"
 "If empty, all the E-Bills in Fatturhello will be downloaded."
 msgstr ""
+"Numero di protocollo di Fatturhello dell'ultima fattura elettronica "
+"scaricata.\n"
+"Tutte le fatture elettroniche successive a questa verranno scaricate durante "
+"l'esecuzione del CRON.\n"
+"Se si vuole, verranno scaricate tutte le fatture elettroniche presenti in "
+"Fatturhello."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr ""
+msgstr "Icona Font Awesome es. fa-tasks"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "Icona"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "Icona per indicare un'attività eccezione."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_fatturapa_attachment_out__fatturhello_protocol
 msgid "Identifier assigned during upload to Fatturhello."
-msgstr ""
+msgstr "Identificatore assegnato durante il caricamento in Fatturhello."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_res_company__fatturhello_identifier
 msgid ""
 "Identifier of this company in Fatturhello, set automatically during login."
 msgstr ""
+"Identificativo di questa azienda in Fatturhello, impostato automaticamente "
+"al momento dell'accesso."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.actions.server,name:l10n_it_fatturapa_fatturhello.ir_cron_fatturhello_import_e_bills_ir_actions_server
 #: model:ir.cron,cron_name:l10n_it_fatturapa_fatturhello.ir_cron_fatturhello_import_e_bills
 msgid "Import E-Bills from Fatturhello"
-msgstr ""
+msgstr "Importa fattura elettronica da Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model,name:l10n_it_fatturapa_fatturhello.model_account_move
 msgid "Journal Entry"
-msgstr ""
+msgstr "Registrazione contabile"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_company_form_e_invoice_sdi
 msgid "Last downloaded E-Bill identifier"
-msgstr ""
+msgstr "Ultimo identificatore fattura elettronica scaricato"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_fatturapa_attachment_out__fatturhello_last_processed_status_datetime
 msgid "Last processed Fatturhello status"
-msgstr ""
+msgstr "Stato ultimo Fatturhello elaborato"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_fatturapa_out_attachment_form
 msgid "Last processed status"
-msgstr ""
+msgstr "Ultimo stato elaborato"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
@@ -264,26 +280,29 @@ msgid ""
 "Response is:\n"
 "%s"
 msgstr ""
+"Scaricamento della lista non riuscito.\n"
+"La risposta è:\n"
+"%s"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_sdi_channel_form
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_sdi_channel_form
 msgid "Login Auth Token"
-msgstr ""
+msgstr "Token autorizzazione accesso"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_sdi_channel_form
 msgid "Login Auth Token creation date"
-msgstr ""
+msgstr "Data creazione token autorizzazione accesso"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model,name:l10n_it_fatturapa_fatturhello.model_l10n_it_fatturapa_fatturhello_login
 msgid "Login to Fatturhello"
-msgstr ""
+msgstr "Accesso a Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
@@ -294,6 +313,9 @@ msgid ""
 "Response is:\n"
 "%s"
 msgstr ""
+"Accesso con token fallito.\n"
+"La risposta è:\n"
+"%s"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
@@ -304,106 +326,109 @@ msgid ""
 "Response is:\n"
 "%s"
 msgstr ""
+"Accesso con utente e password fallito.\n"
+"La risposta è:\n"
+"%s"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model,name:l10n_it_fatturapa_fatturhello.model_l10n_it_fatturapa_fatturhello_connector
 msgid "Manage communication with Fatturhello API."
-msgstr ""
+msgstr "Gestione comunicazione con API Fatturhello."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr ""
+msgstr "Scadenza mia attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr ""
+msgstr "Scadenza prossima attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_summary
 msgid "Next Activity Summary"
-msgstr ""
+msgstr "Riepilogo prossima attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_type_id
 msgid "Next Activity Type"
-msgstr ""
+msgstr "Tipo prossima attività"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Notification type %(notification_type)s not managed"
-msgstr ""
+msgstr "Il tipo notifica %(notification_type)s non è gestito"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__password
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Password is mandatory."
-msgstr ""
+msgstr "La password è obbligatoria."
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Path %s not found."
-msgstr ""
+msgstr "Percorso %s non trovato."
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/wizards/login.py:0
 #, python-format
 msgid "Please select a channel to login to"
-msgstr ""
+msgstr "Selezionare un canale cui accedere"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_fatturapa_out_attachment_form
 msgid "Protocol"
-msgstr ""
+msgstr "Protcollo"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/sdi_channel.py:0
 #, python-format
 msgid "Renew login"
-msgstr ""
+msgstr "Aggiorna accesso"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Request failed, see the logs for more details."
-msgstr ""
+msgstr "Richiesta fallita, visualizza i log per ulteriori dettagli."
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Response creation failed, see the logs for more details."
-msgstr ""
+msgstr "Creazione risposta fallita, vedere i log per ulteriori dettagli."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_user_id
 msgid "Responsible User"
-msgstr ""
+msgstr "Utente responsabile"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields.selection,name:l10n_it_fatturapa_fatturhello.selection__account_move__fatturapa_state__sent_to_fatturhello
 #: model:ir.model.fields.selection,name:l10n_it_fatturapa_fatturhello.selection__fatturapa_attachment_out__state__sent_to_fatturhello
 msgid "Sent to Fatturhello"
-msgstr ""
+msgstr "Inviato a Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_fatturapa_attachment_out__state
 msgid "State"
-msgstr ""
+msgstr "Stato"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_state
@@ -413,6 +438,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
+"Stato in base alle attività\n"
+"Scaduto: la data richiesta è trascorsa\n"
+"Oggi: la data attività è oggi\n"
+"Pianificato: attività future."
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
@@ -423,6 +452,9 @@ msgid ""
 "Response is:\n"
 "%s"
 msgstr ""
+"Fallito controllo stato.\n"
+"La risposta è:\n"
+"%s"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
@@ -432,29 +464,35 @@ msgid ""
 "The company '%(company)s' does not match any company in this Fatturhello account.\n"
 "Please check that VAT '%(vat)s' and FC '%(fc)s' correspond."
 msgstr ""
+"L'azienda '%(company)s' non corrisponde a nessuna azienda presente in questo "
+"account Fatturhello.\n"
+"Si prega di verificare che il codice IVA '%(vat)s' e il codice FC '%(fc)s' "
+"corrispondano."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_sdi_channel__fatturhello_login_authtoken
 msgid "Token can only be set during login. Login again to update the token."
 msgstr ""
+"Il token può essere impostato solo al momento dell'accesso. Effettuare "
+"nuovamente l'accesso per aggiornare il token."
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Token is mandatory."
-msgstr ""
+msgstr "Il token è obbligatorio."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_sdi_channel__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr ""
+msgstr "Tipo di attività eccezione sul record."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.actions.server,name:l10n_it_fatturapa_fatturhello.ir_cron_fatturhello_update_e_invoices_status_ir_actions_server
 #: model:ir.cron,cron_name:l10n_it_fatturapa_fatturhello.ir_cron_fatturhello_update_e_invoices_status
 msgid "Update the status of E-Invoices uploaded to Fatturhello"
-msgstr ""
+msgstr "Aggiorna lo stato delle fatture elettroniche caricate su Fatturhello"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
@@ -465,33 +503,36 @@ msgid ""
 "Response is:\n"
 "%s"
 msgstr ""
+"Caricamento fallito.\n"
+"La risposta è:\n"
+"%s"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_fatturhello.field_l10n_it_fatturapa_fatturhello_login__username
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_sdi_channel_form
 msgid "Username"
-msgstr ""
+msgstr "Nome utente"
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model:ir.model.fields,help:l10n_it_fatturapa_fatturhello.field_sdi_channel__fatturhello_username
 msgid "Username can only be set during login."
-msgstr ""
+msgstr "Il nome utente può essere impostato durante l'accesso."
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/models/connector.py:0
 #, python-format
 msgid "Username is mandatory."
-msgstr ""
+msgstr "Il nome utente è obbligatorio."
 
 #. module: l10n_it_fatturapa_fatturhello
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_fatturhello.view_company_form_e_invoice_sdi
 msgid "YYYYXXXXXXXX"
-msgstr ""
+msgstr "YYYYXXXXXXXX"
 
 #. module: l10n_it_fatturapa_fatturhello
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_fatturhello/wizards/login.py:0
 #, python-format
 msgid "You can only login to Fatturhello channels"
-msgstr ""
+msgstr "Si può effettuare l'accesso solo al canale Fatturhello"
