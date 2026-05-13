@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2017-12-08 03:45+0000\n"
 "PO-Revision-Date: 2017-12-08 03:45+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
-"teams/23907/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
+"23907/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,6 +99,31 @@ msgid "Checksum/SHA1"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_res_company__e_invoice_hide_line_type
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_res_config_settings__e_invoice_hide_line_type
+msgid ""
+"Choose which type of descriptive line will not be present in e-invoices."
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_bank_statement_line__e_invoice_hide_line_type
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_move__e_invoice_hide_line_type
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_payment__e_invoice_hide_line_type
+msgid ""
+"Choose which type of descriptive line will not be present in the e-invoice.\n"
+"If empty, the same field in the partner is evaluated."
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_res_partner__e_invoice_hide_line_type
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_res_users__e_invoice_hide_line_type
+msgid ""
+"Choose which type of descriptive line will not be present in the e-invoices "
+"of this partner.\n"
+"If empty, the same field in the company is evaluated."
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
 #: model:ir.model,name:l10n_it_fatturapa_out.model_res_company
 msgid "Companies"
 msgstr ""
@@ -118,6 +143,11 @@ msgstr ""
 #. module: l10n_it_fatturapa_out
 #: model:ir.model,name:l10n_it_fatturapa_out.model_res_config_settings
 msgid "Config Settings"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
+msgid "Configuration"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
@@ -184,6 +214,17 @@ msgid "Display Name"
 msgstr "Mostrar Nome"
 
 #. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_bank_statement_line__e_invoice_hide_line_type
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_move__e_invoice_hide_line_type
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_payment__e_invoice_hide_line_type
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_res_company__e_invoice_hide_line_type
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_res_config_settings__e_invoice_hide_line_type
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_res_partner__e_invoice_hide_line_type
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_res_users__e_invoice_hide_line_type
+msgid "E Invoice Hide Line Type"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_res_company__e_invoice_transmitter_id
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_res_config_settings__e_invoice_transmitter_id
 msgid "E-bill Transmitter"
@@ -231,11 +272,6 @@ msgstr ""
 #: model:ir.model,name:l10n_it_fatturapa_out.model_fatturapa_attachment_out
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
 msgid "Electronic Invoice"
-msgstr ""
-
-#. module: l10n_it_fatturapa_out
-#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
-msgid "Electronic Invoice Attachments"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
@@ -313,6 +349,38 @@ msgstr ""
 #. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_fatturapa_attachment_out__file_size
 msgid "File Size"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_bank_statement_line__fatturapa_payment_method_id
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_move__fatturapa_payment_method_id
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_payment__fatturapa_payment_method_id
+msgid "Fiscal Payment Method"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_bank_statement_line__fatturapa_payment_method_id
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_move__fatturapa_payment_method_id
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_payment__fatturapa_payment_method_id
+msgid ""
+"Fiscal Payment Method used in the e-invoice, defaults to the Payment Term's "
+"Fiscal Payment Method."
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_bank_statement_line__fatturapa_payment_term_id
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_move__fatturapa_payment_term_id
+#: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_account_payment__fatturapa_payment_term_id
+msgid "Fiscal Payment Term"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_bank_statement_line__fatturapa_payment_term_id
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_move__fatturapa_payment_term_id
+#: model:ir.model.fields,help:l10n_it_fatturapa_out.field_account_payment__fatturapa_payment_term_id
+msgid ""
+"Fiscal Payment Term used in the e-invoice, defaults to the Payment Term's "
+"Fiscal Payment Term."
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
@@ -406,18 +474,14 @@ msgstr ""
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_out/models/account.py:0
 #, python-format
-msgid ""
-"Invoice %(name)s fiscal payment method must be set for the selected payment "
-"term %(term)s"
+msgid "Invoice %(name)s: Fiscal Payment Method must be set."
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_out/models/account.py:0
 #, python-format
-msgid ""
-"Invoice %(name)s fiscal payment term must be set for the selected payment "
-"term %(term)s"
+msgid "Invoice %(name)s: Fiscal Payment Term must be set."
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
@@ -509,6 +573,17 @@ msgid "Last Updated on"
 msgstr "Útima atualização em"
 
 #. module: l10n_it_fatturapa_out
+#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
+#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_partner_form_fatturapa
+msgid "Line Types to hide"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_account_config_settings
+msgid "Line types to hide"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_fatturapa_attachment_out__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
@@ -551,9 +626,30 @@ msgid "Name"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__account_move__e_invoice_hide_line_type__none
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_company__e_invoice_hide_line_type__none
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_partner__e_invoice_hide_line_type__none
+msgid "None"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
 #: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__fatturapa_attachment_out__state__recipient_error
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_fatturapa_out_attachment_search
 msgid "Not delivered"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__account_move__e_invoice_hide_line_type__note
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_company__e_invoice_hide_line_type__note
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_partner__e_invoice_hide_line_type__note
+msgid "Notes"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__account_move__e_invoice_hide_line_type__note_section
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_company__e_invoice_hide_line_type__note_section
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_partner__e_invoice_hide_line_type__note_section
+msgid "Notes and Sections"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
@@ -632,11 +728,6 @@ msgid "Rejected (PA)"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
-#: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
-msgid "Related Documents"
-msgstr ""
-
-#. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_wizard_export_fatturapa__report_print_menu
 msgid "Report Print Menu"
 msgstr ""
@@ -663,12 +754,19 @@ msgstr ""
 
 #. module: l10n_it_fatturapa_out
 #: model_terms:ir.ui.view,arch_db:l10n_it_fatturapa_out.view_invoice_form_fatturapa
-msgid "Results"
+msgid "Result"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
 #: model:ir.model.fields,field_description:l10n_it_fatturapa_out.field_fatturapa_attachment_out__att_name
 msgid "SdI file name"
+msgstr ""
+
+#. module: l10n_it_fatturapa_out
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__account_move__e_invoice_hide_line_type__section
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_company__e_invoice_hide_line_type__section
+#: model:ir.model.fields.selection,name:l10n_it_fatturapa_out.selection__res_partner__e_invoice_hide_line_type__section
+msgid "Sections"
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
@@ -824,7 +922,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/l10n_it_fatturapa_out/models/attachment.py:0
 #, python-format
-msgid "You can only delete files in 'Ready to Send' state."
+msgid "You can only delete files that haven't been sent to SdI yet."
 msgstr ""
 
 #. module: l10n_it_fatturapa_out
